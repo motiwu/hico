@@ -1,0 +1,267 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: Microsoft YaHei;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  position: relative;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+a, a:hover, a:active, a:focus, li:focus, button:focus {
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
+
+input:active, input:focus {
+  outline: none;
+}
+
+body,
+* {
+  font-family: Microsoft JhengHei;
+  color: #231815;
+  text-decoration: none;
+}
+
+header,
+main,
+footer {
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 2%;
+  width: 1100px;
+}
+
+.container:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.clearfix {
+  clear: both;
+}
+
+select, input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.pannellum-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@-webkit-keyframes paint {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 100%;
+  }
+}
+
+@keyframes paint {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 100%;
+  }
+}
+
+.custom-hotspot-nest {
+  width: 496px;
+  height: 324px;
+  background: url("../images/paint-grass.png") center center no-repeat;
+  background-size: 1600%;
+  animation: paint 3s steps(15) alternate-reverse infinite;
+}
+
+.custom-hotspot-nest span {
+  white-space: nowrap;
+}
+
+div.custom-tooltip:hover span {
+  visibility: visible;
+}
+
+div.custom-tooltip:hover span:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+  bottom: -20px;
+  left: -10px;
+  margin: 0 50%;
+}
+
+div.custom-tooltip span {
+  visibility: hidden;
+  position: absolute;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  max-width: 200px;
+  padding: 5px 10px;
+  margin-left: -220px;
+  cursor: default;
+}
+
+.nav-top {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  width: 100%;
+}
+
+.nav-top ul {
+  float: right;
+  font-size: 0;
+}
+
+.nav-top ul > li {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-top ul > li:after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: 0;
+  bottom: 2px;
+  width: 2px;
+  background: #231815;
+}
+
+.nav-top ul > li:last-of-type:after {
+  content: none;
+}
+
+.nav-top ul > li a {
+  display: block;
+  padding: 0px 18px;
+  font-size: 18px;
+}
+
+.page-map {
+  height: 100vh;
+  min-height: 720px;
+  background: #F3E9C1;
+}
+
+.page-map .events {
+  position: absolute;
+}
+
+.page-map .events-1 {
+  top: 20%;
+}
+
+.page-map .events-2 {
+  top: 60%;
+}
+
+.page-map .events-3 {
+  top: 80%;
+}
+
+.page-map .events .pin-sort {
+  white-space: nowrap;
+}
+
+.page-map .events .icon-pin {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 40px;
+}
+
+.page-map .events .icon-pin.heart {
+  fill: #CC4750;
+}
+
+.page-map .events .icon-pin.nite {
+  fill: #EA7F27;
+}
+
+.page-map .events .icon-pin.exp {
+  fill: #25658D;
+}
+
+.page-map .events .icon-pin.info {
+  fill: #EDB139;
+}
+
+.page-map .events .list {
+  display: inline-block;
+  vertical-align: middle;
+  padding: .5em 0;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+}
+
+.page-map .events .list > li {
+  padding: 0 .5em;
+  line-height: 1.5;
+}
+/*# sourceMappingURL=main.css.map */

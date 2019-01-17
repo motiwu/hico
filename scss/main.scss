@@ -1,0 +1,90 @@
+@import 'config';
+@import 'reset';
+@import 'panorama';
+
+
+.nav-top {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    ul {
+        float: right;
+        font-size: 0;;
+        >li {
+            position: relative;
+            display: inline-block;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 2px;
+                right: 0;
+                bottom: 2px;
+                width: 2px;
+                background: #231815;
+            }
+            &:last-of-type {
+                &:after {
+                    content: none;
+                }
+            }
+            a {
+                display: block;
+                padding: 0px 18px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.page-map {
+    height: 100vh;
+    min-height: 720px;
+    background: #F3E9C1;
+
+    .events {
+        position: absolute;
+        &-1 {
+            top: 20%;
+        }
+        &-2 {
+            top: 60%;
+        }
+        &-3 {
+            top: 80%;
+        }
+        .pin-sort {
+            white-space: nowrap;
+        }
+        .icon-pin {
+            display: inline-block;
+            vertical-align: middle;
+            width: 20px;
+            height: 40px;
+            &.heart {
+                fill: #CC4750;
+            }
+            &.nite {
+                fill: #EA7F27;
+            }
+            &.exp {
+                fill: #25658D;
+            }
+            &.info {
+                fill: #EDB139;
+            }
+        }
+        .list {
+            display: inline-block;
+            vertical-align: middle;
+            padding: .5em 0;
+            background: rgba(#fff, .2);
+            border: 1px solid rgba(#fff, .4);
+            border-radius: 8px;
+            >li {
+                padding: 0 .5em;
+                line-height: 1.5;
+            }
+        }
+    }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<!-- Pannellum 2.4.0, https://github.com/mpetroff/pannellum -->
+<html>
+
+<head>
+    <meta charset=utf-8>
+    <meta name=viewport content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="pannellum/pannellum.css">
+    <link rel="stylesheet" type="text/css" href="scss/main.css">
+    <script src="pannellum/pannellum.js"></script>
+    <title>Pannellum</title>
+</head>
+
+<body>
+    <div class="pannellum-wrapper">
+        <div id="panorama"></div>
+    </div>
+
+    <script>
+        pannellum.viewer('panorama', {
+            "autoLoad": true,
+            "default": {
+                "firstScene": "nest", // 預設場景
+                "sceneFadeDuration": 1000 // 縮放轉場時間
+            },
+            "scenes": {
+                "nest": {
+                    "title": "湖本生態合作社",
+                    "author": "Hico",
+                    "hfov": 110,
+                    "pitch": -3,
+                    "yaw": 117,
+                    "type": "equirectangular",
+                    "panorama": "https://i.imgur.com/KD3b8oZ.jpg",
+                    "compass": true, // 指北針
+                    "northOffset": 200, // 正北方向
+                    "hotSpots": [
+                        {
+                            "pitch": -20,
+                            "yaw": 0,
+                            "cssClass": "custom-hotspot custom-hotspot-nest",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "我在發芽"
+                        }, {
+                            "pitch": -1,
+                            "yaw": 37,
+                            "type": "scene",
+                            "text": "天聖宮",
+                            "sceneId": "TSTemple",
+                            "targetYaw": -23,
+                            "targetPitch": 2
+                        }, {
+                            "pitch": 5,
+                            "yaw": 80,
+                            "type": "scene",
+                            "text": "賞鳥步道",
+                            "sceneId": "bird",
+                            "targetYaw": -23,
+                            "targetPitch": 2
+                        }
+                    ],
+                },
+                "TSTemple": {
+                    "title": "天聖宮",
+                    "hfov": 110,
+                    "yaw": 5,
+                    "type": "equirectangular",
+                    "panorama": "https://i.imgur.com/bt6uDMq.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": 5,
+                            "yaw": 105,
+                            "type": "scene",
+                            "text": "湖本生態園區",
+                            "sceneId": "nest",
+                            "targetYaw": -23,
+                            "targetPitch": 2
+                        }
+                    ]
+                },
+                "bird": {
+                    "title": "賞鳥步道",
+                    "hfov": 110,
+                    "yaw": 5,
+                    "type": "equirectangular",
+                    "panorama": "https://i.imgur.com/vRBzudF.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -0.6,
+                            "yaw": 37.1,
+                            "type": "scene",
+                            "text": "Mason Circle",
+                            "sceneId": "circle",
+                            "targetYaw": -23,
+                            "targetPitch": 2
+                        }
+                    ]
+                }
+            }
+        });
+        function hotspot(hotSpotDiv, args) {
+            hotSpotDiv.classList.add('custom-tooltip');
+            var span = document.createElement('span');
+            span.innerHTML = args;
+            hotSpotDiv.appendChild(span);
+            span.style.width = span.scrollWidth - 20 + 'px';
+            span.style.marginLeft = -(span.scrollWidth - hotSpotDiv.offsetWidth) / 2 + 'px';
+            span.style.marginTop = -span.scrollHeight - 12 + 'px';
+        }
+    </script>
+
+</body>
+
+</html>
