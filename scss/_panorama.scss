@@ -32,6 +32,9 @@
             background: url('../images/paint-ani-1.png') center center no-repeat;
             background-size: 200%;
             animation: paint 3s steps(1) alternate-reverse infinite;
+            ~span {
+                
+            }
         }
         &-2 { // 祈福鳥巢
             width: 25%;
@@ -81,7 +84,7 @@ div.custom-tooltip {
         background-color: #fff;
         color: #000;
         text-align: center;
-        max-width: 200px;
+        max-width: 275px;
         padding: 5px 10px;
         margin-left: -220px;
         cursor: default;

@@ -15,140 +15,174 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-family: Microsoft YaHei;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block; }
+  display: block;
+}
 
 body {
-  position: relative; }
+  position: relative;
+}
 
 ol, ul {
-  list-style: none; }
+  list-style: none;
+}
 
 blockquote, q {
-  quotes: none; }
+  quotes: none;
+}
 
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
-  content: none; }
+  content: none;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 button {
   border: 0;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 a, a:hover, a:active, a:focus, li:focus, button:focus {
   text-decoration: none;
   cursor: pointer;
-  outline: none; }
+  outline: none;
+}
 
 input:active, input:focus {
-  outline: none; }
+  outline: none;
+}
 
 body,
 * {
   font-family: Microsoft JhengHei;
   color: #231815;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 header,
 main,
 footer {
-  width: 100%; }
+  width: 100%;
+}
 
 .container {
   margin: 0 auto;
   padding: 0 10px;
-  width: 1100px; }
-  .container:after {
-    content: '';
-    display: block;
-    clear: both; }
+  width: 1100px;
+}
+
+.container:after {
+  content: '';
+  display: block;
+  clear: both;
+}
 
 .clearfix {
-  clear: both; }
+  clear: both;
+}
 
 select, input {
   -moz-appearance: none;
   -webkit-appearance: none;
-  appearance: none; }
+  appearance: none;
+}
 
 .pannellum-wrapper {
   position: absolute;
   top: 0;
   right: 0;
   width: 100vw;
-  height: 100vh; }
+  height: 100vh;
+}
 
 @-webkit-keyframes paint {
   from {
-    background-position-x: 0; }
+    background-position-x: 0;
+  }
   to {
-    background-position-x: 100%; } }
+    background-position-x: 100%;
+  }
+}
 
 @keyframes paint {
   from {
-    background-position-x: 0; }
+    background-position-x: 0;
+  }
   to {
-    background-position-x: 100%; } }
+    background-position-x: 100%;
+  }
+}
 
 .custom-hotspot-nest {
   width: 496px;
   height: 324px;
   background: url("../images/paint-grass.png") center center no-repeat;
   background-size: 1600%;
-  animation: paint 3s steps(15) alternate-reverse infinite; }
-  .custom-hotspot-nest span {
-    white-space: nowrap; }
+  animation: paint 3s steps(15) alternate-reverse infinite;
+}
+
+.custom-hotspot-nest span {
+  white-space: nowrap;
+}
 
 .custom-hotspot.paint-ani-1 {
   width: 30%;
   padding-bottom: 24.14634%;
   background: url("../images/paint-ani-1.png") center center no-repeat;
   background-size: 200%;
-  animation: paint 3s steps(1) alternate-reverse infinite; }
+  animation: paint 3s steps(1) alternate-reverse infinite;
+}
 
 .custom-hotspot.paint-ani-2 {
   width: 25%;
   padding-bottom: 20.25463%;
   background: url("../images/paint-ani-2.png") center center no-repeat;
   background-size: 200%;
-  animation: paint 3s steps(1) alternate-reverse infinite; }
+  animation: paint 3s steps(1) alternate-reverse infinite;
+}
 
 .custom-hotspot.paint-ani-3 {
   width: 32%;
   padding-bottom: 25.7561%;
   background: url("../images/paint-ani-3.png") center center no-repeat;
   background-size: 700%;
-  animation: paint 3s steps(6) alternate-reverse infinite; }
+  animation: paint 3s steps(6) alternate-reverse infinite;
+}
 
 .custom-hotspot.paint-ani-4 {
   width: 35%;
   padding-bottom: 28.91516%;
   background: url("../images/paint-ani-4.png") center center no-repeat;
   background-size: 800%;
-  animation: paint 3s steps(7) alternate-reverse infinite; }
+  animation: paint 3s steps(7) alternate-reverse infinite;
+}
 
 div.custom-tooltip:hover span {
-  visibility: visible; }
-  div.custom-tooltip:hover span:after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-width: 10px;
-    border-style: solid;
-    border-color: #fff transparent transparent transparent;
-    bottom: -20px;
-    left: -10px;
-    margin: 0 50%; }
+  visibility: visible;
+}
+
+div.custom-tooltip:hover span:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+  bottom: -20px;
+  left: -10px;
+  margin: 0 50%;
+}
 
 div.custom-tooltip span {
   visibility: hidden;
@@ -157,87 +191,129 @@ div.custom-tooltip span {
   background-color: #fff;
   color: #000;
   text-align: center;
-  max-width: 200px;
+  max-width: 275px;
   padding: 5px 10px;
   margin-left: -220px;
-  cursor: default; }
+  cursor: default;
+}
 
 .nav-top {
   position: fixed;
   top: 20px;
   left: 0;
-  width: 100%; }
-  .nav-top ul {
-    float: right;
-    font-size: 0; }
-    .nav-top ul > li {
-      position: relative;
-      display: inline-block; }
-      .nav-top ul > li:after {
-        content: '';
-        position: absolute;
-        top: 2px;
-        right: 0;
-        bottom: 2px;
-        width: 2px;
-        background: #231815; }
-      .nav-top ul > li:last-of-type:after {
-        content: none; }
-      .nav-top ul > li a {
-        display: block;
-        padding: 0px 18px;
-        font-size: 18px; }
+  width: 100%;
+}
+
+.nav-top ul {
+  float: right;
+  font-size: 0;
+}
+
+.nav-top ul > li {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-top ul > li:after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: 0;
+  bottom: 2px;
+  width: 2px;
+  background: #231815;
+}
+
+.nav-top ul > li:last-of-type:after {
+  content: none;
+}
+
+.nav-top ul > li a {
+  display: block;
+  padding: 0px 18px;
+  font-size: 18px;
+}
 
 .page-map {
   height: 100vh;
   min-height: 720px;
-  background: #F3E9C1; }
-  .page-map .container {
-    height: 100%; }
-  .page-map .events {
-    position: absolute;
-    z-index: 20; }
-    .page-map .events-1 {
-      top: 20%; }
-    .page-map .events-2 {
-      top: 60%; }
-    .page-map .events-3 {
-      top: 85%; }
-    .page-map .events .pin-sort {
-      white-space: nowrap; }
-    .page-map .events .icon-pin {
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 8px;
-      width: 20px;
-      height: 40px; }
-      .page-map .events .icon-pin.heart {
-        fill: #CC4750; }
-      .page-map .events .icon-pin.nite {
-        fill: #EA7F27; }
-      .page-map .events .icon-pin.exp {
-        fill: #25658D; }
-      .page-map .events .icon-pin.info {
-        fill: #EDB139; }
-    .page-map .events .list {
-      display: inline-block;
-      vertical-align: middle;
-      padding: .5em 0;
-      background: rgba(255, 255, 255, 0.2);
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      border-radius: 8px; }
-      .page-map .events .list > li {
-        padding: 0 .5em;
-        line-height: 1.5; }
-  .page-map .map-wrapper {
-    position: relative;
-    z-index: 10;
-    height: 100%; }
-    .page-map .map-wrapper .icon-map {
-      position: absolute;
-      top: 5%;
-      right: 0;
-      width: 80%;
-      height: 90%; }
+  background: #F3E9C1;
+}
 
+.page-map .container {
+  height: 100%;
+}
+
+.page-map .events {
+  position: absolute;
+  z-index: 20;
+}
+
+.page-map .events-1 {
+  top: 20%;
+}
+
+.page-map .events-2 {
+  top: 60%;
+}
+
+.page-map .events-3 {
+  top: 85%;
+}
+
+.page-map .events .pin-sort {
+  white-space: nowrap;
+}
+
+.page-map .events .icon-pin {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  width: 20px;
+  height: 40px;
+}
+
+.page-map .events .icon-pin.heart {
+  fill: #CC4750;
+}
+
+.page-map .events .icon-pin.nite {
+  fill: #EA7F27;
+}
+
+.page-map .events .icon-pin.exp {
+  fill: #25658D;
+}
+
+.page-map .events .icon-pin.info {
+  fill: #EDB139;
+}
+
+.page-map .events .list {
+  display: inline-block;
+  vertical-align: middle;
+  padding: .5em 0;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+}
+
+.page-map .events .list > li {
+  padding: 0 .5em;
+  line-height: 1.5;
+}
+
+.page-map .map-wrapper {
+  position: relative;
+  z-index: 10;
+  height: 100%;
+}
+
+.page-map .map-wrapper .icon-map {
+  position: absolute;
+  top: 5%;
+  right: 0;
+  width: 80%;
+  height: 90%;
+}
 /*# sourceMappingURL=main.css.map */
