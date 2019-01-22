@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="pannellum/pannellum.css">
     <link rel="stylesheet" type="text/css" href="scss/main.css">
     <script src="pannellum/pannellum.js"></script>
+    <script src="js/main.js"></script>
     <title>Pannellum</title>
 </head>
 
@@ -100,6 +101,39 @@
                         <use xlink:href="#map" />
                     </svg>
                 </section>
+            </div>
+        </article>
+
+
+
+        <article class="page-route">
+            <div class="container">
+                <h2>地圖地圖</h2>
+
+                <section class="route" onclick="openDialog()">
+                    <div class="thumbnail thumbnail-1"></div>
+                    <h4>更多資訊</h4>
+                </section>
+
+                <section class="route" onclick="openDialog()">
+                    <div class="thumbnail thumbnail-1"></div>
+                    <h4>更多資訊</h4>
+                </section>
+
+                <section class="route" onclick="openDialog()">
+                    <div class="thumbnail thumbnail-1"></div>
+                    <h4>更多資訊</h4>
+                </section>
+
+            </div>
+
+        </article>
+
+        <article class="dialog" id="dialog-route">
+            <div class="dialog-content">
+                <button class="btn-x" onclick="cloasDialog()">&#9587;</button>
+                <img src="./images/route/route-min-1.png">
+                <p>簡介簡介簡介簡介簡介簡介簡介簡介</p>
             </div>
         </article>
     </main>
