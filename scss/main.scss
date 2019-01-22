@@ -41,9 +41,13 @@
     height: 100vh;
     min-height: 720px;
     background: #F3E9C1;
+    .container {
+        height: 100%;
+    }
 
     .events {
         position: absolute;
+        z-index: 20;
         &-1 {
             top: 20%;
         }
@@ -51,7 +55,7 @@
             top: 60%;
         }
         &-3 {
-            top: 80%;
+            top: 85%;
         }
         .pin-sort {
             white-space: nowrap;
@@ -59,6 +63,7 @@
         .icon-pin {
             display: inline-block;
             vertical-align: middle;
+            margin-right: 8px;
             width: 20px;
             height: 40px;
             &.heart {
@@ -85,6 +90,19 @@
                 padding: 0 .5em;
                 line-height: 1.5;
             }
+        }
+    }
+
+    .map-wrapper {
+        position: relative;
+        z-index: 10;
+        height: 100%;
+        .icon-map {
+            position: absolute;
+            top: 5%;
+            right: 0;
+            width: 80%;
+            height: 90%;
         }
     }
 }

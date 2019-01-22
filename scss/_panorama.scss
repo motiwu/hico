@@ -2,8 +2,8 @@
     position: absolute;
     top: 0;
     right: 0;
-    bottom: 0;
-    left: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
 @keyframes paint {
@@ -22,6 +22,37 @@
         animation: paint 3s steps(15) alternate-reverse infinite;
         span {
             white-space: nowrap;
+        }
+    }
+
+    &.paint-ani {
+        &-1 { // 向心鳥巢
+            width: 30%;
+            padding-bottom: (594 / 738 * 100% * (30 / 100));
+            background: url('../images/paint-ani-1.png') center center no-repeat;
+            background-size: 200%;
+            animation: paint 3s steps(1) alternate-reverse infinite;
+        }
+        &-2 { // 祈福鳥巢
+            width: 25%;
+            padding-bottom: 20.25463%;
+            background: url('../images/paint-ani-2.png') center center no-repeat;
+            background-size: 200%;
+            animation: paint 3s steps(1) alternate-reverse infinite;
+        }
+        &-3 { // 尋覓鳥巢
+            width: 32%;
+            padding-bottom: (594 / 738 * 100% * (32 / 100));
+            background: url('../images/paint-ani-3.png') center center no-repeat;
+            background-size: 700%;
+            animation: paint 3s steps(6) alternate-reverse infinite;
+        }
+        &-4 { // 尋覓鳥巢
+            width: 35%;
+            padding-bottom: (594 / 719 * 100% * (35 / 100));
+            background: url('../images/paint-ani-4.png') center center no-repeat;
+            background-size: 800%;
+            animation: paint 3s steps(7) alternate-reverse infinite;
         }
     }
 }

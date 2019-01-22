@@ -20,10 +20,82 @@
         pannellum.viewer('panorama', {
             "autoLoad": true,
             "default": {
-                "firstScene": "nest", // 預設場景
+                "firstScene": "activityCenter", // 預設場景
                 "sceneFadeDuration": 1000 // 縮放轉場時間
             },
             "scenes": {
+                "activityCenter": {
+                    "title": "活動中心-向心鳥巢",
+                    "hfov": 180,
+                    "yaw": 5,
+                    "type": "equirectangular",
+                    "panorama": "images/pano-1.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": 5,
+                            "yaw": 105,
+                            "type": "TSTemple",
+                            "text": "天聖宮<br>祈福鳥巢",
+                            "sceneId": "nest",
+                            "targetYaw": -23,
+                            "targetPitch": 2
+                        }, {
+                            "pitch": 0,
+                            "yaw": 240,
+                            "cssClass": "custom-hotspot paint-ani-1",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "向心鳥巢"
+                        }
+                    ]
+                },
+                "TSTemple": {
+                    "title": "天聖宮",
+                    "hfov": 110,
+                    "yaw": 5,
+                    "type": "equirectangular",
+                    "panorama": "images/pano-2.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": 5,
+                            "yaw": 105,
+                            "type": "scene",
+                            "text": "湖本生態園區",
+                            "sceneId": "nest",
+                            "targetYaw": -23,
+                            "targetPitch": 2
+                        }, {
+                            "pitch": 0,
+                            "yaw": 240,
+                            "cssClass": "custom-hotspot paint-ani-2",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "祈福鳥巢"
+                        }
+                    ]
+                },
+                "bird": {
+                    "title": "賞鳥步道",
+                    "hfov": 110,
+                    "yaw": 5,
+                    "type": "equirectangular",
+                    "panorama": "images/pano-3.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -0.6,
+                            "yaw": 37.1,
+                            "type": "scene",
+                            "text": "Mason Circle",
+                            "sceneId": "circle",
+                            "targetYaw": -23,
+                            "targetPitch": 2
+                        }, {
+                            "pitch": -10,
+                            "yaw": 150,
+                            "cssClass": "custom-hotspot paint-ani-3",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "尋覓鳥巢"
+                        }
+                    ]
+                },
                 "nest": {
                     "title": "湖本生態合作社",
                     "author": "Hico",
@@ -31,17 +103,18 @@
                     "pitch": -3,
                     "yaw": 117,
                     "type": "equirectangular",
-                    "panorama": "https://i.imgur.com/KD3b8oZ.jpg",
+                    "panorama": "images/pano-4.jpg",
                     "compass": true, // 指北針
                     "northOffset": 200, // 正北方向
                     "hotSpots": [
+                        // {
+                        //     "pitch": -20,
+                        //     "yaw": 0,
+                        //     "cssClass": "custom-hotspot custom-hotspot-nest",
+                        //     "createTooltipFunc": hotspot,
+                        //     "createTooltipArgs": "我在發芽"
+                        // }, 
                         {
-                            "pitch": -20,
-                            "yaw": 0,
-                            "cssClass": "custom-hotspot custom-hotspot-nest",
-                            "createTooltipFunc": hotspot,
-                            "createTooltipArgs": "我在發芽"
-                        }, {
                             "pitch": -1,
                             "yaw": 37,
                             "type": "scene",
@@ -57,45 +130,15 @@
                             "sceneId": "bird",
                             "targetYaw": -23,
                             "targetPitch": 2
+                        }, {
+                            "pitch": -10,
+                            "yaw": 0,
+                            "cssClass": "custom-hotspot paint-ani-4",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "歡樂鳥巢"
                         }
                     ],
                 },
-                "TSTemple": {
-                    "title": "天聖宮",
-                    "hfov": 110,
-                    "yaw": 5,
-                    "type": "equirectangular",
-                    "panorama": "https://i.imgur.com/bt6uDMq.jpg",
-                    "hotSpots": [
-                        {
-                            "pitch": 5,
-                            "yaw": 105,
-                            "type": "scene",
-                            "text": "湖本生態園區",
-                            "sceneId": "nest",
-                            "targetYaw": -23,
-                            "targetPitch": 2
-                        }
-                    ]
-                },
-                "bird": {
-                    "title": "賞鳥步道",
-                    "hfov": 110,
-                    "yaw": 5,
-                    "type": "equirectangular",
-                    "panorama": "https://i.imgur.com/vRBzudF.jpg",
-                    "hotSpots": [
-                        {
-                            "pitch": -0.6,
-                            "yaw": 37.1,
-                            "type": "scene",
-                            "text": "Mason Circle",
-                            "sceneId": "circle",
-                            "targetYaw": -23,
-                            "targetPitch": 2
-                        }
-                    ]
-                }
             }
         });
         function hotspot(hotSpotDiv, args) {
