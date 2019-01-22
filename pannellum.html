@@ -49,7 +49,7 @@
                     ]
                 },
                 "TSTemple": {
-                    "title": "天聖宮",
+                    "title": "天聖宮-祈福鳥巢",
                     "hfov": 110,
                     "yaw": 5,
                     "type": "equirectangular",
@@ -73,7 +73,7 @@
                             "targetPitch": 2
                         }, {
                             "pitch": 0,
-                            "yaw": 240,
+                            "yaw": 120,
                             "cssClass": "custom-hotspot paint-ani-2",
                             "createTooltipFunc": hotspot,
                             "createTooltipArgs": "祈福鳥巢"
@@ -81,7 +81,7 @@
                     ]
                 },
                 "bird": {
-                    "title": "賞鳥步道",
+                    "title": "賞鳥生態導覽步道-尋覓鳥巢",
                     "hfov": 110,
                     "yaw": 5,
                     "type": "equirectangular",
@@ -91,8 +91,16 @@
                             "pitch": 5,
                             "yaw": 105,
                             "type": "scene",
-                            "text": "賞鳥生態導覽步道<br>尋覓鳥巢",
-                            "sceneId": "bird",
+                            "text": "天聖宮<br>祈福鳥巢",
+                            "sceneId": "TSTemple",
+                            "targetYaw": -23,
+                            "targetPitch": 2
+                        }, {
+                            "pitch": 5,
+                            "yaw": 75,
+                            "type": "scene",
+                            "text": "湖本生態合作社<br>生態鳥巢",
+                            "sceneId": "nest",
                             "targetYaw": -23,
                             "targetPitch": 2
                         }, {
@@ -105,7 +113,7 @@
                     ]
                 },
                 "nest": {
-                    "title": "湖本生態合作社",
+                    "title": "湖本生態合作社-歡樂鳥巢",
                     "author": "Hico",
                     "hfov": 110,
                     "pitch": -3,
@@ -126,15 +134,7 @@
                             "pitch": -1,
                             "yaw": 37,
                             "type": "scene",
-                            "text": "天聖宮",
-                            "sceneId": "TSTemple",
-                            "targetYaw": -23,
-                            "targetPitch": 2
-                        }, {
-                            "pitch": 5,
-                            "yaw": 80,
-                            "type": "scene",
-                            "text": "賞鳥步道",
+                            "text": "賞鳥生態導覽步道<br>尋覓鳥巢",
                             "sceneId": "bird",
                             "targetYaw": -23,
                             "targetPitch": 2
