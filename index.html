@@ -29,23 +29,23 @@
         <div class="container">
             <ul>
                 <li>
-                    <a href="#">主頁</a>
+                    <a href="#page-index">印向湖本</a>
                 </li>
                 <li>
-                    <a href="#">關於</a>
+                    <a href="#">活動說明</a>
                 </li>
                 <li>
-                    <a href="#">景點介紹</a>
+                    <a href="#page-map">探索裝置</a>
                 </li>
                 <li>
-                    <a href="#">探索裝置</a>
+                    <a href="#page-route">景點介紹</a>
                 </li>
             </ul>
         </div>
     </nav>
 
     <main>
-        <article class="page-index">
+        <article id="page-index" class="page-index">
             <div class="container">
                 <section class="map">
                     <svg class="icon-map">
@@ -79,7 +79,7 @@
             </div>
         </article>
 
-        <article class="page-map">
+        <article id="page-map" class="page-map">
             <div class="container">
 
                 <section class="events events-1">
@@ -140,7 +140,7 @@
 
 
 
-        <article class="page-route">
+        <article id="page-route" class="page-route">
             <div class="container">
                 <h2>地圖地圖</h2>
 
@@ -174,7 +174,16 @@
 
 
 
-
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
     
 
 </body>
