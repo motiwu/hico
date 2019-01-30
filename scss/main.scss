@@ -38,19 +38,22 @@
     }
 }
 
+@keyframes mountain {
+    0%, 66% { transform: scale(1.2, .8) }
+    33%, 100% { transform: scale(1, 1) }
+}
+
 .page-index {
     position: relative;
-    padding-bottom: 200px;
     height: 100vh;
     min-height: 720px;
-    background: linear-gradient(to bottom, #fff 50%, rgba(#eeffea, .6) 80%, #f7efce 100%);
     .container {
         height: 100%;
     }
     .map {
         position: absolute;
-        right: 55%;
-        width: 55%;
+        left: 0%;
+        width: 66%;
         height: calc(100% - 200px);
         .icon-map {
             width: 100%;
@@ -59,19 +62,49 @@
         }
     }
     .imagine {
+        position: relative;
         margin-left: 50%;
         width: 50%;
         height: 100%;
         text-align: center;
-        background: url(../images/index/imagine.png) center 25% no-repeat;
-        background-size: 100%;
         &:before {
             content: '';
             display: inline-block;
             vertical-align: middle;
             height: 100%;
         }
+        .bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            .ribbon {
+                position: absolute;
+                z-index: 20;
+                top: 30%;
+                right: 0;
+                left: 0;
+                padding-bottom: 39.0625%;
+                background: url(../images/index/imagine.png) center bottom no-repeat;
+                background-size: 100%;
+            }
+            .mountain {
+                position: absolute;
+                z-index: 10;
+                top: 15%;
+                right: 0;
+                left: 0;
+                padding-bottom: 39.0625%;
+                background: url(../images/index/imagine.png) center top no-repeat;
+                background-size: 100%;
+                transform-origin: center bottom;
+                animation: mountain 1s cubic-bezier(0, 0, 0.5, 2.5) forwards;
+            }
+        }
         h4 {
+            position: relative;
+            z-index: 100;
             display: inline-block;
             vertical-align: middle;
             padding-top: 20%;
@@ -79,6 +112,42 @@
             color: #604C22;
             line-height: 1.6;
         }
+    }
+}
+
+.page-bird {
+    height: 100vh;
+    min-height: 720px;
+    padding-bottom: 200px;
+    background: linear-gradient(to bottom, #fff 50%, rgba(#eeffea, .6) 80%, #f7efce 100%);
+    h3 {
+        box-sizing: border-box;
+        margin-bottom: 100px;
+        padding-top: 70px;
+        height: 170px;
+        line-height: 100px;
+        font-size: 32px;
+        text-indent: 270px;
+        color: #57744A;
+        background: url('../images/index/imagine.png') -50px -20px no-repeat;
+    }
+    .content {
+        font-size: 0;
+    }
+    .half {
+        display: inline-block;
+        vertical-align: middle;
+        width: 50%;
+        font-size: 16px;
+    }
+    .img-bird {
+        height: 350px;
+        background: url('../images/index/bird.png') center center no-repeat;
+    }
+    p {
+        padding: 0 20px;
+        line-height: 1.6;
+        color: #604C22;
     }
 }
 
