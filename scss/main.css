@@ -143,16 +143,16 @@ select, input {
   width: 30%;
   padding-bottom: 24.14634%;
   background: url("../images/paint-ani-1.png") center center no-repeat;
-  background-size: 200%;
-  animation: paint 3s steps(1) alternate-reverse infinite;
+  background-size: 400%;
+  animation: paint 1.5s steps(3) alternate-reverse infinite;
 }
 
 .custom-hotspot.paint-ani-2 {
   width: 25%;
   padding-bottom: 20.25463%;
   background: url("../images/paint-ani-2.png") center center no-repeat;
-  background-size: 200%;
-  animation: paint 3s steps(1) alternate-reverse infinite;
+  background-size: 400%;
+  animation: paint 1.5s steps(3) alternate-reverse infinite;
 }
 
 .custom-hotspot.paint-ani-3 {
