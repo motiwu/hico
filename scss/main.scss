@@ -3,6 +3,28 @@
 @import 'panorama';
 
 
+
+.icon-pin {
+    &.heart {
+        fill: #CC4750;
+    }
+    &.nite {
+        fill: #EA7F27;
+    }
+    &.exp {
+        fill: #25658D;
+    }
+    &.info {
+        fill: #EDB139;
+    }
+}
+
+
+
+
+
+
+
 .nav-top {
     position: fixed;
     z-index: 500;
@@ -190,18 +212,6 @@
             margin-right: 8px;
             width: 20px;
             height: 40px;
-            &.heart {
-                fill: #CC4750;
-            }
-            &.nite {
-                fill: #EA7F27;
-            }
-            &.exp {
-                fill: #25658D;
-            }
-            &.info {
-                fill: #EDB139;
-            }
         }
         .list {
             display: inline-block;
@@ -227,6 +237,50 @@
             right: 0;
             width: 80%;
             height: 90%;
+        }
+
+        .marks {
+            .mark {
+                position: absolute;
+                &-1 {
+                    top: 43%;
+                    left: 45%;
+                }
+                &-2 {
+                    top: 46.5%;
+                    left: 50%;
+                }
+                &-3 {
+                    top: 44.5%;
+                    left: 52%;
+                }
+                &-4 {
+                    top: 50%;
+                    left: 75.5%;
+                }
+                .icon-pin {
+                    width: 20px;
+                    height: 40px;
+                    cursor: pointer;
+                    &:hover {
+                        ~h5 {
+                            opacity: 1;
+                            transform: translate(-50%, -10px);
+                        }
+                    }
+                }
+                h5 {
+                    position: absolute;
+                    z-index: 50;
+                    left: 50%;
+                    bottom: 100%;
+                    white-space: nowrap;
+                    transform: translate(-50%, 0);
+                    opacity: 0;
+                    transition: opacity .2s, transform .2s;
+                    pointer-events: none;
+                }
+            }
         }
     }
 }
