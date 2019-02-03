@@ -94,7 +94,7 @@
             <div class="container">
 
                 <section class="events events-1">
-                    <div class="pin-sort">
+                    <div class="pin-sort" onclick="toggleMarks('heart')">
                         <svg class="icon-pin heart">
                             <use xlink:href="#icon-pin" />
                         </svg>
@@ -103,7 +103,7 @@
                         </ul>
                     </div>
 
-                    <div class="pin-sort">
+                    <div class="pin-sort" onclick="toggleMarks('nite')">
                         <svg class="icon-pin nite">
                             <use xlink:href="#icon-pin" />
                         </svg>
@@ -114,7 +114,7 @@
                 </section>
 
                 <section class="events events-2">
-                    <div class="pin-sort">
+                    <div class="pin-sort" onclick="toggleMarks('exp')">
                         <svg class="icon-pin exp">
                             <use xlink:href="#icon-pin" />
                         </svg>
@@ -130,7 +130,7 @@
                 </section>
 
                 <section class="events events-3">
-                    <div class="pin-sort">
+                    <div class="pin-sort" onclick="toggleMarks('info')">
                         <svg class="icon-pin info">
                             <use xlink:href="#icon-pin" />
                         </svg>
@@ -147,7 +147,34 @@
                         <use xlink:href="#map-river" />
                     </svg>
 
-                    <ul class="marks">
+                    <ul id="marks-heart" class="marks marks-heart">
+                        <li class="mark mark-1">
+                            <svg class="icon-pin heart">
+                                <use xlink:href="#icon-pin" />
+                            </svg>
+                            <h5>景點名稱</h5>
+                        </li>
+                        <li class="mark mark-2">
+                            <svg class="icon-pin heart">
+                                <use xlink:href="#icon-pin" />
+                            </svg>
+                            <h5>景點名稱</h5>
+                        </li>
+                        <li class="mark mark-3">
+                            <svg class="icon-pin heart">
+                                <use xlink:href="#icon-pin" />
+                            </svg>
+                            <h5>景點名稱</h5>
+                        </li>
+                        <li class="mark mark-4">
+                            <svg class="icon-pin heart">
+                                <use xlink:href="#icon-pin" />
+                            </svg>
+                            <h5>景點名稱</h5>
+                        </li>
+                    </ul>
+
+                    <ul id="marks-nite" class="marks marks-nite">
                         <li class="mark mark-1">
                             <svg class="icon-pin nite">
                                 <use xlink:href="#icon-pin" />
@@ -168,6 +195,21 @@
                         </li>
                         <li class="mark mark-4">
                             <svg class="icon-pin nite">
+                                <use xlink:href="#icon-pin" />
+                            </svg>
+                            <h5>景點名稱</h5>
+                        </li>
+                    </ul>
+
+                    <ul id="marks-info" class="marks marks-info">
+                        <li class="mark mark-1">
+                            <svg class="icon-pin info">
+                                <use xlink:href="#icon-pin" />
+                            </svg>
+                            <h5>湖本生態合作社</h5>
+                        </li>
+                        <li class="mark mark-2">
+                            <svg class="icon-pin info">
                                 <use xlink:href="#icon-pin" />
                             </svg>
                             <h5>景點名稱</h5>
@@ -223,6 +265,8 @@
         });
     });
 </script>
+
+<script src="js/main.js"></script>
     
 
 </body>

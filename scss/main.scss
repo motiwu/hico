@@ -182,6 +182,15 @@
     }
 }
 
+
+
+@keyframes mark {
+    from { top: 30% }
+    // 0% { transform: translateY(-60px) }
+    // 100% { transform: translateY(0) }
+}
+
+
 .page-map {
     position: relative;
     height: 100vh;
@@ -240,46 +249,92 @@
         }
 
         .marks {
-            .mark {
-                position: absolute;
-                &-1 {
-                    top: 43%;
-                    left: 45%;
-                }
-                &-2 {
-                    top: 46.5%;
-                    left: 50%;
-                }
-                &-3 {
-                    top: 44.5%;
-                    left: 52%;
-                }
-                &-4 {
-                    top: 50%;
-                    left: 75.5%;
-                }
-                .icon-pin {
-                    width: 20px;
-                    height: 40px;
-                    cursor: pointer;
-                    &:hover {
-                        ~h5 {
-                            opacity: 1;
-                            transform: translate(-50%, -10px);
-                        }
+            &-heart {
+                .mark {
+                    &-1 {
+                        top: 45%;
+                        left: 63%;
+                    }
+                    &-2 {
+                        top: 47.5%;
+                        left: 67%;
+                    }
+                    &-3 {
+                        top: 68%;
+                        left: 82.5%;
+                    }
+                    &-4 {
+                        top: 77%;
+                        left: 82%;
                     }
                 }
-                h5 {
-                    position: absolute;
-                    z-index: 50;
-                    left: 50%;
-                    bottom: 100%;
-                    white-space: nowrap;
-                    transform: translate(-50%, 0);
-                    opacity: 0;
-                    transition: opacity .2s, transform .2s;
-                    pointer-events: none;
+            }
+            &-nite {
+                .mark {
+                    &-1 {
+                        top: 43%;
+                        left: 45%;
+                    }
+                    &-2 {
+                        top: 46.5%;
+                        left: 50%;
+                    }
+                    &-3 {
+                        top: 44.5%;
+                        left: 52%;
+                    }
+                    &-4 {
+                        top: 50%;
+                        left: 75.5%;
+                    }
                 }
+            }
+            &-info {
+                .mark {
+                    &-1 {
+                        top: 45%;
+                        left: 63%;
+                    }
+                    &-2 {
+                        top: 44%;
+                        left: 73%;
+                    }
+                }
+            }
+            &:not(.active) {
+                display: none;
+            }
+        }
+        
+        .mark {
+            position: absolute;
+            animation: mark;
+            @for $i from 1 through 4 {
+                &-#{$i} {
+                    animation-duration: #{$i * .2 + .15}s;
+                }
+            }
+            .icon-pin {
+                width: 20px;
+                height: 40px;
+                cursor: pointer;
+                &:hover {
+                    ~h5 {
+                        opacity: 1;
+                        transform: translate(-50%, -10px);
+                    }
+                }
+            }
+            h5 {
+                position: absolute;
+                z-index: 50;
+                left: 50%;
+                bottom: 100%;
+                white-space: nowrap;
+                transform: translate(-50%, 0);
+                opacity: 0;
+                transition: opacity .2s, transform .2s;
+                pointer-events: none;
             }
         }
     }
