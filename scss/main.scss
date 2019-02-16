@@ -2,7 +2,9 @@
 @import 'reset';
 @import 'panorama';
 
-
+:root {
+    --currentSpot: 0; // 顯示第幾張 0,1,2...
+}
 
 .icon-pin {
     &.heart {
@@ -19,6 +21,23 @@
     }
 }
 
+
+.bridge-index-map {
+    height: 200px;
+    background: linear-gradient(to bottom, #fff 0%, #f7efce 180px);
+}
+.bridge-map-bird {
+    height: 200px;
+    background: linear-gradient(to bottom, #f7efce 0%, #fff 180px);
+}
+// .bridge-bird-spots {
+//     height: 200px;
+//     background: linear-gradient(to bottom, #f7efce 0%, #CDE0D0 180px);
+// }
+.bridge-spots-route {
+    height: 200px;
+    background: linear-gradient(to bottom, #CDE0D0 0%, #bbd1de 180px);
+}
 
 
 
@@ -147,10 +166,11 @@
 }
 
 .page-bird {
+    box-sizing: border-box;
+    padding-top: 100px;
     height: 100vh;
     min-height: 720px;
-    padding-bottom: 200px;
-    background: linear-gradient(to bottom, #fff 50%, rgba(#eeffea, .6) 80%, #f7efce 100%);
+    background: linear-gradient(to bottom, #fff 55%, #CDE0D0 100%);
     h3 {
         box-sizing: border-box;
         margin-bottom: 100px;
@@ -287,10 +307,109 @@
 
 
 
-.page-route {
-    padding: 200px 0;
+.page-spots {
     min-height: 100vh;
-    background: linear-gradient(to bottom, #f7efce 0%, #CDE0D0 180px);
+    background: #CDE0D0;
+    h2 {
+        font-size: 40px;
+        line-height: 5;
+        text-align: center;
+    }
+    .slider-wrapper {
+        position: relative;
+        overflow: hidden;
+        .btn {
+            position: absolute;
+            top: 220px;
+            z-index: 1;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(#000, 0);
+            border: 1px solid rgba(#fff, .6);
+            transition: .3s;
+            &:hover {
+                border-color: #fff;
+                &:before {
+                    left: 42%;
+                }
+            }
+            &:active {
+                background: rgba(#fff, .2);
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                display: block;
+                width: 40%;
+                height: 40%;
+                border: solid #fff;
+                border-width: 0 2px 2px 0;
+                transform: translate(-30%, -50%) rotate(135deg);
+                transition: .3s;
+            }
+            &-prev {
+                left: calc(50% - 585px);
+                &:hover {
+                    box-shadow: 6px 6px 16px rgba(#000, .05);
+                }
+            }
+            &-next {
+                right: calc(50% - 595px);
+                transform: rotate(180deg);
+                &:hover {
+                    box-shadow: -6px -6px 16px rgba(#000, .05);
+                }
+            }
+        }
+    }
+    .slider {
+        font-size: 0;
+        white-space: nowrap;
+        transform: translateX(calc(var(--currentSpot) * -100%));
+        transition: transform .4s;
+        >li {
+            display: inline-block;
+            box-sizing: border-box;
+            padding: 80px 120px;
+            width: 100%;
+            height: 600px;
+            font-size: 16px;
+            white-space: normal;
+            background: url('../images/spots-bg.png') center center no-repeat;
+            @include alignCenter('img');
+
+            .img {
+                display: inline-block;
+                vertical-align: middle;
+                width: 400px;
+                height: 300px;
+                background: #000;
+            }
+            .info {
+                display: inline-block;
+                vertical-align: middle;
+                padding-left: 50px;
+                width: calc(100% - 470px);
+                h5 {
+                    font-size: 24px;
+                    line-height: 3;
+                }
+                p {
+                    line-height: 1.6;
+                }
+            }
+        }
+    }
+}
+
+
+
+.page-route {
+    min-height: 100vh;
+    background: #bbd1de;
     
     h2 {
         font-size: 40px;
