@@ -1031,15 +1031,36 @@ div.custom-tooltip span {
 
 .page-spots .slider > li .info .paint {
   position: absolute;
-  top: 0;
-  right: 0;
-  background: right top no-repeat;
+  top: -2%;
+  right: 3%;
+  width: 30%;
+  height: 200px;
+  background: center center no-repeat;
+  background-size: contain;
 }
 
 .page-spots .slider > li .info .paint-park {
-  width: 20%;
-  height: 200px;
   background-image: url("../images/svg-paint/park.svg");
+}
+
+.page-spots .slider > li .info .paint-corp {
+  background-image: url("../images/svg-paint/corp.svg");
+}
+
+.page-spots .slider > li .info .paint-horse {
+  background-image: url("../images/svg-paint/horse.svg");
+}
+
+.page-spots .slider > li .info .paint-temple {
+  background-image: url("../images/svg-paint/temple.svg");
+}
+
+.page-spots .slider > li .info .paint-bamboo {
+  background-image: url("../images/svg-paint/bamboo.svg");
+}
+
+.page-spots .slider > li .info .paint-camp {
+  background-image: url("../images/svg-paint/camp.svg");
 }
 
 .page-route {

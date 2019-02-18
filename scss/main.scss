@@ -693,13 +693,29 @@
                 }
                 .paint {
                     position: absolute;
-                    top: 0;
-                    right: 0;
-                    background: right top no-repeat;
+                    top: -2%;
+                    right: 3%;
+                    width: 30%;
+                    height: 200px;
+                    background: center center no-repeat;
+                    background-size: contain;
                     &-park {
-                        width: 20%;
-                        height: 200px;
                         background-image: url('../images/svg-paint/park.svg');
+                    }
+                    &-corp {
+                        background-image: url('../images/svg-paint/corp.svg');
+                    }
+                    &-horse {
+                        background-image: url('../images/svg-paint/horse.svg');
+                    }
+                    &-temple {
+                        background-image: url('../images/svg-paint/temple.svg');
+                    }
+                    &-bamboo {
+                        background-image: url('../images/svg-paint/bamboo.svg');
+                    }
+                    &-camp {
+                        background-image: url('../images/svg-paint/camp.svg');
                     }
                 }
             }
