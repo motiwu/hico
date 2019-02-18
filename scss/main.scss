@@ -262,6 +262,10 @@
         position: relative;
         z-index: 10;
         height: 100%;
+        transition: transform .5s;
+        &.trans {
+            transform: translateX(-50%) scale(1.2);
+        }
         .icon-paint {
             position: absolute;
             z-index: 20;
@@ -577,6 +581,53 @@
                 pointer-events: none;
             }
         }
+    }
+
+@keyframes detailFade {
+    0% { transform: translateX(140px); opacity: .6; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+    .details {
+        position: absolute;
+        left: 60%;
+        top: 20%;
+        .detail-heart {
+            &:not(.active) {
+                display: none;
+            }
+            >li {
+                margin: 20px;
+                @for $i from 1 through 4 {
+                    &:nth-child(#{$i}) {
+                        animation: detailFade #{(.3 + $i * .3)}s forwards;
+                    }
+                }
+                .img {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 160px;
+                    height: 120px;
+                    border-radius: 16px;
+                    background-size: contain;
+                    @for $i from 1 through 4 {
+                        &-#{$i} {
+                            background-image: url('../images/spots/#{$i}.png');
+                        }
+                    }
+                }
+                .intro {
+                    display: inline-block;
+                    vertical-align: middle;
+                    padding-left: 40px;
+                    h5 {
+                        font-size: 22px;
+                        line-height: 2.2;
+                    }
+                }
+            }
+        }
+        
     }
 }
 

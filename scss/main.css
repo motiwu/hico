@@ -509,6 +509,15 @@ div.custom-tooltip span {
   position: relative;
   z-index: 10;
   height: 100%;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.page-map .map-wrapper.trans {
+  -webkit-transform: translateX(-50%) scale(1.2);
+          transform: translateX(-50%) scale(1.2);
 }
 
 .page-map .map-wrapper .icon-paint {
@@ -873,6 +882,102 @@ div.custom-tooltip span {
   transition: opacity .2s, transform .2s;
   transition: opacity .2s, transform .2s, -webkit-transform .2s;
   pointer-events: none;
+}
+
+@-webkit-keyframes detailFade {
+  0% {
+    -webkit-transform: translateX(140px);
+            transform: translateX(140px);
+    opacity: .6;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes detailFade {
+  0% {
+    -webkit-transform: translateX(140px);
+            transform: translateX(140px);
+    opacity: .6;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.page-map .details {
+  position: absolute;
+  left: 60%;
+  top: 20%;
+}
+
+.page-map .details .detail-heart:not(.active) {
+  display: none;
+}
+
+.page-map .details .detail-heart > li {
+  margin: 20px;
+}
+
+.page-map .details .detail-heart > li:nth-child(1) {
+  -webkit-animation: detailFade 0.6s forwards;
+          animation: detailFade 0.6s forwards;
+}
+
+.page-map .details .detail-heart > li:nth-child(2) {
+  -webkit-animation: detailFade 0.9s forwards;
+          animation: detailFade 0.9s forwards;
+}
+
+.page-map .details .detail-heart > li:nth-child(3) {
+  -webkit-animation: detailFade 1.2s forwards;
+          animation: detailFade 1.2s forwards;
+}
+
+.page-map .details .detail-heart > li:nth-child(4) {
+  -webkit-animation: detailFade 1.5s forwards;
+          animation: detailFade 1.5s forwards;
+}
+
+.page-map .details .detail-heart > li .img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 160px;
+  height: 120px;
+  border-radius: 16px;
+  background-size: contain;
+}
+
+.page-map .details .detail-heart > li .img-1 {
+  background-image: url("../images/spots/1.png");
+}
+
+.page-map .details .detail-heart > li .img-2 {
+  background-image: url("../images/spots/2.png");
+}
+
+.page-map .details .detail-heart > li .img-3 {
+  background-image: url("../images/spots/3.png");
+}
+
+.page-map .details .detail-heart > li .img-4 {
+  background-image: url("../images/spots/4.png");
+}
+
+.page-map .details .detail-heart > li .intro {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 40px;
+}
+
+.page-map .details .detail-heart > li .intro h5 {
+  font-size: 22px;
+  line-height: 2.2;
 }
 
 .page-spots {

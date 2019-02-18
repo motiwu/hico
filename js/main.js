@@ -45,3 +45,14 @@ function prevspot() {
     if (currentSpot > 0)
         document.documentElement.style.setProperty('--currentSpot', Number(currentSpot) - 1);
 }
+
+
+
+function maptrans() {
+    document.getElementById('map-wrapper').classList.add('trans');
+}
+
+function mapmark(type) {
+    maptrans();
+    document.getElementById('detail-' + type).classList.add('active');
+}
