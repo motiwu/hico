@@ -511,12 +511,259 @@ div.custom-tooltip span {
   height: 100%;
 }
 
+.page-map .map-wrapper .icon-paint {
+  position: absolute;
+  z-index: 20;
+  top: 5%;
+  right: 0;
+  width: 80%;
+  height: 90%;
+  background: center center no-repeat;
+  background-size: contain;
+}
+
+.page-map .map-wrapper .icon-paint-bamboo {
+  top: 51%;
+  right: 4%;
+  width: 50px;
+  height: 60px;
+  background-image: url("../images/svg-paint/bamboo.svg");
+}
+
+.page-map .map-wrapper .icon-paint-camp {
+  top: 57.5%;
+  right: 24.5%;
+  width: 100px;
+  height: 65px;
+  background-image: url("../images/svg-paint/camp.svg");
+}
+
+.page-map .map-wrapper .icon-paint-center {
+  top: 46%;
+  right: 27%;
+  width: 60px;
+  height: 50px;
+  background-image: url("../images/svg-paint/center.svg");
+}
+
+.page-map .map-wrapper .icon-paint-corp {
+  top: 38%;
+  right: 31%;
+  width: 55px;
+  height: 55px;
+  background-image: url("../images/svg-paint/corp.svg");
+}
+
+.page-map .map-wrapper .icon-paint-horse {
+  top: 27%;
+  right: 54%;
+  width: 75px;
+  height: 55px;
+  background-image: url("../images/svg-paint/horse.svg");
+}
+
+.page-map .map-wrapper .icon-paint-orange {
+  top: 45.5%;
+  right: 18%;
+  width: 50px;
+  height: 50px;
+  background-image: url("../images/svg-paint/orange.svg");
+}
+
+.page-map .map-wrapper .icon-paint-park {
+  top: 44%;
+  right: 42%;
+  width: 55px;
+  height: 55px;
+  background-image: url("../images/svg-paint/park.svg");
+}
+
+.page-map .map-wrapper .icon-paint-temple {
+  top: 62.5%;
+  right: 8%;
+  width: 70px;
+  height: 50px;
+  background-image: url("../images/svg-paint/temple.svg");
+}
+
+.page-map .map-wrapper .icon-paint-trail {
+  top: 65%;
+  right: 19%;
+  width: 85px;
+  height: 85px;
+  background-image: url("../images/svg-paint/trail.svg");
+}
+
+.page-map .map-wrapper .icon-paint-village {
+  top: 43%;
+  right: 23%;
+  width: 50px;
+  height: 50px;
+  background-image: url("../images/svg-paint/village.svg");
+}
+
 .page-map .map-wrapper .icon-map {
   position: absolute;
   top: 5%;
   right: 0;
   width: 80%;
   height: 90%;
+}
+
+.page-map .map-wrapper .icon-bird {
+  position: absolute;
+  z-index: 10;
+  top: 65%;
+  right: 26%;
+  width: 75px;
+  height: 85px;
+  background: url(../images/map/bird.svg) center center no-repeat;
+}
+
+.page-map .map-wrapper .icon-coffee {
+  position: absolute;
+  z-index: 10;
+  top: 40%;
+  right: 27%;
+  width: 45px;
+  height: 50px;
+  background: url(../images/map/coffee.svg) center center no-repeat;
+}
+
+.page-map .map-wrapper .icon-orange {
+  position: absolute;
+  z-index: 10;
+  top: 42.5%;
+  right: 13%;
+  width: 50px;
+  height: 55px;
+  background: url(../images/map/orange.svg) center center no-repeat;
+}
+
+.page-map .map-wrapper .icon-temple {
+  position: absolute;
+  z-index: 10;
+  top: 67%;
+  right: 5%;
+  width: 60px;
+  height: 85px;
+  background: url(../images/map/temple.svg) center center no-repeat;
+}
+
+.page-map .map-wrapper .icon-camp {
+  position: absolute;
+  z-index: 10;
+  top: 59%;
+  right: 34%;
+  width: 50px;
+  height: 55px;
+  background: url(../images/map/camp.svg) center center no-repeat;
+}
+
+.page-map .map-wrapper .icon-bamboo {
+  position: absolute;
+  z-index: 10;
+  top: 49%;
+  right: 9%;
+  width: 55px;
+  height: 65px;
+  background: url(../images/map/bamboo.svg) center center no-repeat;
+}
+
+.page-map .map-wrapper .icon-landmark {
+  position: absolute;
+  z-index: 10;
+  top: 32.5%;
+  right: 48.5%;
+  width: 75px;
+  height: 140px;
+  background: url(../images/map/landmark.svg) center center no-repeat;
+}
+
+.page-map .map-wrapper .icon-landmark-bird {
+  position: absolute;
+  z-index: 10;
+  top: 28.5%;
+  right: 49%;
+  width: 50px;
+  height: 40px;
+  background: url(../images/map/landmark-bird.png) center center no-repeat;
+  background-size: contain;
+}
+
+.page-map .map-wrapper .icon-tree {
+  position: absolute;
+  z-index: 10;
+  background: url(../images/map/tree.svg) center center no-repeat;
+}
+
+.page-map .map-wrapper .icon-tree-1 {
+  top: 49%;
+  right: 70%;
+  width: 80px;
+  height: 95px;
+}
+
+.page-map .map-wrapper .icon-tree-2 {
+  top: 20%;
+  right: 47%;
+  width: 55px;
+  height: 70px;
+}
+
+.page-map .map-wrapper .icon-tree-3 {
+  top: 57%;
+  right: 54%;
+  width: 45px;
+  height: 60px;
+}
+
+.page-map .map-wrapper .icon-tree-4 {
+  top: 62%;
+  right: 44%;
+  width: 60px;
+  height: 85px;
+}
+
+.page-map .map-wrapper .icon-mountain {
+  position: absolute;
+  z-index: 10;
+  background: url(../images/map/mountain.svg) center center no-repeat;
+}
+
+.page-map .map-wrapper .icon-mountain-1 {
+  top: 32%;
+  right: 7%;
+  width: 150px;
+  height: 95px;
+}
+
+.page-map .map-wrapper .icon-mountain-2 {
+  top: 42%;
+  right: -2%;
+  width: 100px;
+  height: 66px;
+}
+
+.page-map .map-wrapper .icon-mountain-3 {
+  top: 72%;
+  right: -5%;
+  width: 130px;
+  height: 90px;
+}
+
+.page-map .map-wrapper .icon-mountain-4 {
+  top: 74%;
+  right: 11%;
+  width: 50px;
+  height: 40px;
+}
+
+.page-map .map-wrapper .icon-mountain-5 {
+  top: 58%;
+  right: 6.5%;
+  width: 38px;
+  height: 30px;
 }
 
 .page-map .map-wrapper .marks-heart .mark-1 {
@@ -575,6 +822,7 @@ div.custom-tooltip span {
 
 .page-map .map-wrapper .mark {
   position: absolute;
+  z-index: 30;
   -webkit-animation: mark;
           animation: mark;
 }
@@ -716,6 +964,7 @@ div.custom-tooltip span {
 }
 
 .page-spots .slider > li {
+  position: relative;
   display: inline-block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -778,6 +1027,19 @@ div.custom-tooltip span {
 
 .page-spots .slider > li .info p {
   line-height: 1.6;
+}
+
+.page-spots .slider > li .info .paint {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: right top no-repeat;
+}
+
+.page-spots .slider > li .info .paint-park {
+  width: 20%;
+  height: 200px;
+  background-image: url("../images/svg-paint/park.svg");
 }
 
 .page-route {
