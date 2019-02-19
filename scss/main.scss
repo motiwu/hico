@@ -7,6 +7,7 @@
 @import 'index/bird';
 @import 'index/spots';
 @import 'index/route';
+@import 'index/event';
 
 :root {
     --currentSpot: 0; // 顯示第幾張 0,1,2...
