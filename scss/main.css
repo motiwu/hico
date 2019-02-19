@@ -201,91 +201,6 @@ div.custom-tooltip span {
   cursor: default;
 }
 
-:root {
-  --currentSpot: 0;
-}
-
-.icon-pin.heart {
-  fill: #CC4750;
-}
-
-.icon-pin.nite {
-  fill: #EA7F27;
-}
-
-.icon-pin.exp {
-  fill: #25658D;
-}
-
-.icon-pin.info {
-  fill: #EDB139;
-}
-
-.bridge-index-map {
-  height: 200px;
-  background: linear-gradient(to bottom, #fff 0%, #f7efce 180px);
-}
-
-.bridge-map-bird {
-  height: 200px;
-  background: linear-gradient(to bottom, #f7efce 0%, #fff 180px);
-}
-
-.bridge-spots-route {
-  height: 200px;
-  background: linear-gradient(to bottom, #CDE0D0 0%, #bbd1de 180px);
-}
-
-.nav-top {
-  position: fixed;
-  z-index: 500;
-  top: 20px;
-  left: 0;
-  width: 100%;
-  min-width: 1100px;
-  background: -webkit-gradient(linear, left top, right top, color-stop(54%, rgba(255, 255, 255, 0)), color-stop(57%, #eafb88), color-stop(60%, #ecf9a5), to(rgba(39, 140, 79, 0)));
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 54%, #eafb88 57%, #ecf9a5 60%, rgba(39, 140, 79, 0) 100%);
-}
-
-.nav-top ul {
-  float: right;
-  font-size: 0;
-}
-
-.nav-top ul > li {
-  position: relative;
-  display: inline-block;
-}
-
-.nav-top ul > li:after {
-  content: '';
-  position: absolute;
-  top: 5px;
-  right: 0;
-  bottom: 5px;
-  width: 1px;
-  background: #585858;
-  opacity: .4;
-}
-
-.nav-top ul > li:last-of-type:after {
-  content: none;
-}
-
-.nav-top ul > li a {
-  display: block;
-  padding: 0px 18px;
-  font-size: 18px;
-  color: #585858;
-  line-height: 1.6;
-  -webkit-transition: background .4s;
-  transition: background .4s;
-}
-
-.nav-top ul > li a:hover {
-  background: rgba(230, 235, 199, 0.6);
-}
-
 @-webkit-keyframes mountain {
   0%, 66% {
     -webkit-transform: scale(1.2, 0.8);
@@ -389,51 +304,6 @@ div.custom-tooltip span {
   width: 50%;
   color: #604C22;
   line-height: 1.6;
-}
-
-.page-bird {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding-top: 100px;
-  height: 100vh;
-  min-height: 720px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(55%, #fff), to(#CDE0D0));
-  background: linear-gradient(to bottom, #fff 55%, #CDE0D0 100%);
-}
-
-.page-bird h3 {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin-bottom: 100px;
-  padding-top: 70px;
-  height: 170px;
-  line-height: 100px;
-  font-size: 32px;
-  text-indent: 270px;
-  color: #57744A;
-  background: url("../images/index/imagine.png") -50px -20px no-repeat;
-}
-
-.page-bird .content {
-  font-size: 0;
-}
-
-.page-bird .half {
-  display: inline-block;
-  vertical-align: middle;
-  width: 50%;
-  font-size: 16px;
-}
-
-.page-bird .img-bird {
-  height: 350px;
-  background: url("../images/index/bird.png") center center no-repeat;
-}
-
-.page-bird p {
-  padding: 0 20px;
-  line-height: 1.6;
-  color: #604C22;
 }
 
 @-webkit-keyframes mark {
@@ -980,6 +850,51 @@ div.custom-tooltip span {
   line-height: 2.2;
 }
 
+.page-bird {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 100px;
+  height: 100vh;
+  min-height: 720px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(55%, #fff), to(#CDE0D0));
+  background: linear-gradient(to bottom, #fff 55%, #CDE0D0 100%);
+}
+
+.page-bird h3 {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 100px;
+  padding-top: 70px;
+  height: 170px;
+  line-height: 100px;
+  font-size: 32px;
+  text-indent: 270px;
+  color: #57744A;
+  background: url("../images/index/imagine.png") -50px -20px no-repeat;
+}
+
+.page-bird .content {
+  font-size: 0;
+}
+
+.page-bird .half {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+  font-size: 16px;
+}
+
+.page-bird .img-bird {
+  height: 350px;
+  background: url("../images/index/bird.png") center center no-repeat;
+}
+
+.page-bird p {
+  padding: 0 20px;
+  line-height: 1.6;
+  color: #604C22;
+}
+
 .page-spots {
   min-height: 100vh;
   background: #CDE0D0;
@@ -1261,5 +1176,90 @@ div.custom-tooltip span {
 
 .dialog .dialog-content p {
   padding-top: 8px;
+}
+
+:root {
+  --currentSpot: 0;
+}
+
+.icon-pin.heart {
+  fill: #CC4750;
+}
+
+.icon-pin.nite {
+  fill: #EA7F27;
+}
+
+.icon-pin.exp {
+  fill: #25658D;
+}
+
+.icon-pin.info {
+  fill: #EDB139;
+}
+
+.bridge-index-map {
+  height: 200px;
+  background: linear-gradient(to bottom, #fff 0%, #f7efce 180px);
+}
+
+.bridge-map-bird {
+  height: 200px;
+  background: linear-gradient(to bottom, #f7efce 0%, #fff 180px);
+}
+
+.bridge-spots-route {
+  height: 200px;
+  background: linear-gradient(to bottom, #CDE0D0 0%, #bbd1de 180px);
+}
+
+.nav-top {
+  position: fixed;
+  z-index: 500;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  min-width: 1100px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(54%, rgba(255, 255, 255, 0)), color-stop(57%, #eafb88), color-stop(60%, #ecf9a5), to(rgba(39, 140, 79, 0)));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 54%, #eafb88 57%, #ecf9a5 60%, rgba(39, 140, 79, 0) 100%);
+}
+
+.nav-top ul {
+  float: right;
+  font-size: 0;
+}
+
+.nav-top ul > li {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-top ul > li:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 0;
+  bottom: 5px;
+  width: 1px;
+  background: #585858;
+  opacity: .4;
+}
+
+.nav-top ul > li:last-of-type:after {
+  content: none;
+}
+
+.nav-top ul > li a {
+  display: block;
+  padding: 0px 18px;
+  font-size: 18px;
+  color: #585858;
+  line-height: 1.6;
+  -webkit-transition: background .4s;
+  transition: background .4s;
+}
+
+.nav-top ul > li a:hover {
+  background: rgba(230, 235, 199, 0.6);
 }
 /*# sourceMappingURL=main.css.map */

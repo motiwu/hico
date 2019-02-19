@@ -1,0 +1,140 @@
+.page-spots {
+    min-height: 100vh;
+    background: #CDE0D0;
+    h2 {
+        font-size: 40px;
+        line-height: 5;
+        text-align: center;
+    }
+    .slider-wrapper {
+        position: relative;
+        overflow: hidden;
+        .btn {
+            position: absolute;
+            top: 220px;
+            z-index: 1;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(#000, 0);
+            border: 1px solid rgba(#fff, .6);
+            transition: .3s;
+            &:hover {
+                border-color: #fff;
+                &:before {
+                    left: 42%;
+                }
+            }
+            &:active {
+                background: rgba(#fff, .2);
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                display: block;
+                width: 40%;
+                height: 40%;
+                border: solid #fff;
+                border-width: 0 2px 2px 0;
+                transform: translate(-30%, -50%) rotate(135deg);
+                transition: .3s;
+            }
+            &-prev {
+                left: calc(50% - 585px);
+                &:hover {
+                    box-shadow: 6px 6px 16px rgba(#000, .05);
+                }
+            }
+            &-next {
+                right: calc(50% - 595px);
+                transform: rotate(180deg);
+                &:hover {
+                    box-shadow: -6px -6px 16px rgba(#000, .05);
+                }
+            }
+        }
+    }
+    .slider {
+        font-size: 0;
+        white-space: nowrap;
+        transform: translateX(calc(var(--currentSpot) * -100%));
+        transition: transform .4s;
+        >li {
+            position: relative;
+            display: inline-block;
+            box-sizing: border-box;
+            padding: 80px 120px;
+            width: 100%;
+            height: 600px;
+            font-size: 16px;
+            white-space: normal;
+            background: url('../images/spots/spots-bg.png') center center no-repeat;
+            @include alignCenter('img');
+
+            .img {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                width: 400px;
+                height: 300px;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 10px;
+                    right: -12px;
+                    bottom: -10px;
+                    left: 12px;
+                    display: block;
+                    background: url('../images/spots/spots-border.png');
+                }
+                img {
+                    position: relative;
+                    z-index: 1;
+                    border-radius: 15px;
+                }
+            }
+            .info {
+                display: inline-block;
+                vertical-align: middle;
+                padding-left: 50px;
+                width: calc(100% - 470px);
+                h5 {
+                    font-size: 24px;
+                    line-height: 3;
+                }
+                p {
+                    line-height: 1.6;
+                }
+                .paint {
+                    position: absolute;
+                    top: -2%;
+                    right: 3%;
+                    width: 30%;
+                    height: 200px;
+                    background: center center no-repeat;
+                    background-size: contain;
+                    &-park {
+                        background-image: url('../images/svg-paint/park.svg');
+                    }
+                    &-corp {
+                        background-image: url('../images/svg-paint/corp.svg');
+                    }
+                    &-horse {
+                        background-image: url('../images/svg-paint/horse.svg');
+                    }
+                    &-temple {
+                        background-image: url('../images/svg-paint/temple.svg');
+                    }
+                    &-bamboo {
+                        background-image: url('../images/svg-paint/bamboo.svg');
+                    }
+                    &-camp {
+                        background-image: url('../images/svg-paint/camp.svg');
+                    }
+                }
+            }
+        }
+    }
+}

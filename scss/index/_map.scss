@@ -1,0 +1,426 @@
+@keyframes mark {
+    from { top: 30% }
+    // 0% { transform: translateY(-60px) }
+    // 100% { transform: translateY(0) }
+}
+
+
+.page-map {
+    position: relative;
+    height: 100vh;
+    min-height: 720px;
+    background: #f7efce;
+    .container {
+        height: 100%;
+    }
+
+    .events {
+        position: absolute;
+        z-index: 20;
+        &-1 {
+            top: 20%;
+        }
+        &-2 {
+            top: 60%;
+        }
+        &-3 {
+            top: 85%;
+        }
+        .pin-sort {
+            white-space: nowrap;
+        }
+        .icon-pin {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 8px;
+            width: 20px;
+            height: 40px;
+        }
+        .list {
+            display: inline-block;
+            vertical-align: middle;
+            padding: .5em 0;
+            background: rgba(#fff, .2);
+            border: 1px solid rgba(#fff, .4);
+            border-radius: 8px;
+            box-shadow: 2px 2px 20px rgba(0,0,0,.05);
+            cursor: pointer;
+            >li {
+                padding: 0 .5em;
+                line-height: 1.5;
+            }
+        }
+    }
+
+    .map-wrapper {
+        position: relative;
+        z-index: 10;
+        height: 100%;
+        transition: transform .5s;
+        &.trans {
+            transform: translateX(-50%) scale(1.2);
+        }
+        .icon-paint {
+            position: absolute;
+            z-index: 20;
+            top: 5%;
+            right: 0;
+            width: 80%;
+            height: 90%;
+            background: center center no-repeat;
+            background-size: contain;
+            &-bamboo {
+                top: 51%;
+                right: 4%;
+                width: 50px;
+                height: 60px;
+                background-image: url('../images/svg-paint/bamboo.svg');
+            }
+            &-camp {
+                top: 57.5%;
+                right: 24.5%;
+                width: 100px;
+                height: 65px;
+                background-image: url('../images/svg-paint/camp.svg');
+            }
+            &-center {
+                top: 46%;
+                right: 27%;
+                width: 60px;
+                height: 50px;
+                background-image: url('../images/svg-paint/center.svg');
+            }
+            &-corp {
+                top: 38%;
+                right: 31%;
+                width: 55px;
+                height: 55px;
+                background-image: url('../images/svg-paint/corp.svg');
+            }
+            &-horse {
+                top: 27%;
+                right: 54%;
+                width: 75px;
+                height: 55px;
+                background-image: url('../images/svg-paint/horse.svg');
+            }
+            &-orange {
+                top: 45.5%;
+                right: 18%;
+                width: 50px;
+                height: 50px;
+                background-image: url('../images/svg-paint/orange.svg');
+            }
+            &-park {
+                top: 44%;
+                right: 42%;
+                width: 55px;
+                height: 55px;
+                background-image: url('../images/svg-paint/park.svg');
+            }
+            &-temple {
+                top: 62.5%;
+                right: 8%;
+                width: 70px;
+                height: 50px;
+                background-image: url('../images/svg-paint/temple.svg');
+            }
+            &-trail {
+                top: 65%;
+                right: 19%;
+                width: 85px;
+                height: 85px;
+                background-image: url('../images/svg-paint/trail.svg');
+            }
+            &-village {
+                top: 43%;
+                right: 23%;
+                width: 50px;
+                height: 50px;
+                background-image: url('../images/svg-paint/village.svg');
+            }
+        }
+        .icon-map {
+            position: absolute;
+            top: 5%;
+            right: 0;
+            width: 80%;
+            height: 90%;
+        }
+        .icon-bird {
+            position: absolute;
+            z-index: 10;
+            top: 65%;
+            right: 26%;
+            width: 75px;
+            height: 85px;
+            background: url(../images/map/bird.svg) center center no-repeat;
+        }
+        .icon-coffee {
+            position: absolute;
+            z-index: 10;
+            top: 40%;
+            right: 27%;
+            width: 45px;
+            height: 50px;
+            background: url(../images/map/coffee.svg) center center no-repeat;
+        }
+        .icon-orange {
+            position: absolute;
+            z-index: 10;
+            top: 42.5%;
+            right: 13%;
+            width: 50px;
+            height: 55px;
+            background: url(../images/map/orange.svg) center center no-repeat;
+        }
+        .icon-temple {
+            position: absolute;
+            z-index: 10;
+            top: 67%;
+            right: 5%;
+            width: 60px;
+            height: 85px;
+            background: url(../images/map/temple.svg) center center no-repeat;
+        }
+        .icon-camp {
+            position: absolute;
+            z-index: 10;
+            top: 59%;
+            right: 34%;
+            width: 50px;
+            height: 55px;
+            background: url(../images/map/camp.svg) center center no-repeat;
+        }
+        .icon-bamboo {
+            position: absolute;
+            z-index: 10;
+            top: 49%;
+            right: 9%;
+            width: 55px;
+            height: 65px;
+            background: url(../images/map/bamboo.svg) center center no-repeat;
+        }
+        .icon-landmark {
+            position: absolute;
+            z-index: 10;
+            top: 32.5%;
+            right: 48.5%;
+            width: 75px;
+            height: 140px;
+            background: url(../images/map/landmark.svg) center center no-repeat;
+        }
+        .icon-landmark-bird {
+            position: absolute;
+            z-index: 10;
+            top: 28.5%;
+            right: 49%;
+            width: 50px;
+            height: 40px;
+            background: url(../images/map/landmark-bird.png) center center no-repeat;
+            background-size: contain;
+        }
+        .icon-tree {
+            position: absolute;
+            z-index: 10;
+            background: url(../images/map/tree.svg) center center no-repeat;
+            &-1 {
+                top: 49%;
+                right: 70%;
+                width: 80px;
+                height: 95px;
+            }
+            &-2 {
+                top: 20%;
+                right: 47%;
+                width: 55px;
+                height: 70px;
+            }
+            &-3 {
+                top: 57%;
+                right: 54%;
+                width: 45px;
+                height: 60px;
+            }
+            &-4 {
+                top: 62%;
+                right: 44%;
+                width: 60px;
+                height: 85px;
+            }
+        }
+        .icon-mountain {
+            position: absolute;
+            z-index: 10;
+            background: url(../images/map/mountain.svg) center center no-repeat;
+            &-1 {
+                top: 32%;
+                right: 7%;
+                width: 150px;
+                height: 95px;
+            }
+            &-2 {
+                top: 42%;
+                right: -2%;
+                width: 100px;
+                height: 66px;
+            }
+            &-3 {
+                top: 72%;
+                right: -5%;
+                width: 130px;
+                height: 90px;
+            }
+            &-4 {
+                top: 74%;
+                right: 11%;
+                width: 50px;
+                height: 40px;
+            }
+            &-5 {
+                top: 58%;
+                right: 6.5%;
+                width: 38px;
+                height: 30px;
+            }
+        }
+
+        .marks {
+            &-heart {
+                .mark {
+                    &-1 {
+                        top: 45%;
+                        left: 63%;
+                    }
+                    &-2 {
+                        top: 47.5%;
+                        left: 67%;
+                    }
+                    &-3 {
+                        top: 77%;
+                        left: 82%;
+                    }
+                    &-4 {
+                        top: 68%;
+                        left: 82.5%;
+                    }
+                }
+            }
+            &-nite {
+                .mark {
+                    &-1 {
+                        top: 43%;
+                        left: 45%;
+                    }
+                    &-2 {
+                        top: 46.5%;
+                        left: 50%;
+                    }
+                    &-3 {
+                        top: 44.5%;
+                        left: 52%;
+                    }
+                    &-4 {
+                        top: 50%;
+                        left: 75.5%;
+                    }
+                }
+            }
+            &-info {
+                .mark {
+                    &-1 {
+                        top: 45%;
+                        left: 63%;
+                    }
+                    &-2 {
+                        top: 44%;
+                        left: 73%;
+                    }
+                }
+            }
+            &:not(.active) {
+                display: none;
+            }
+        }
+        
+        .mark {
+            position: absolute;
+            z-index: 30;
+            animation: mark;
+            @for $i from 1 through 4 {
+                &-#{$i} {
+                    animation-duration: #{$i * .2 + .15}s;
+                }
+            }
+            .icon-pin {
+                width: 20px;
+                height: 40px;
+                cursor: pointer;
+                &:hover {
+                    ~h5 {
+                        opacity: 1;
+                        transform: translate(-50%, -10px);
+                    }
+                }
+            }
+            h5 {
+                position: absolute;
+                z-index: 50;
+                left: 50%;
+                bottom: 100%;
+                white-space: nowrap;
+                transform: translate(-50%, 0);
+                opacity: 0;
+                transition: opacity .2s, transform .2s;
+                pointer-events: none;
+            }
+        }
+    }
+
+@keyframes detailFade {
+    0% { transform: translateX(140px); opacity: .6; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+    .details {
+        position: absolute;
+        left: 60%;
+        top: 20%;
+        .detail-heart {
+            &:not(.active) {
+                display: none;
+            }
+            >li {
+                margin: 20px;
+                @for $i from 1 through 4 {
+                    &:nth-child(#{$i}) {
+                        animation: detailFade #{(.3 + $i * .3)}s forwards;
+                    }
+                }
+                .img {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 160px;
+                    height: 120px;
+                    border-radius: 16px;
+                    background-size: contain;
+                    @for $i from 1 through 4 {
+                        &-#{$i} {
+                            background-image: url('../images/spots/#{$i}.png');
+                        }
+                    }
+                }
+                .intro {
+                    display: inline-block;
+                    vertical-align: middle;
+                    padding-left: 40px;
+                    h5 {
+                        font-size: 22px;
+                        line-height: 2.2;
+                    }
+                }
+            }
+        }
+        
+    }
+}
