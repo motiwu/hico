@@ -11,6 +11,7 @@
 
 :root {
     --currentSpot: 0; // 顯示第幾張 0,1,2...
+    --currentEvent: 0; // 顯示第幾張 0,1,2...
 }
 
 .icon-pin {
@@ -29,9 +30,13 @@
 }
 
 
-.bridge-index-map {
+.bridge-index-event {
     height: 200px;
-    background: linear-gradient(to bottom, #fff 0%, #f7efce 180px);
+    background: linear-gradient(to bottom, #fff 0%, #cfe4e4 180px);
+}
+.bridge-event-map {
+    height: 200px;
+    background: linear-gradient(to bottom, #cfe4e4 0%, #f7efce 180px);
 }
 .bridge-map-bird {
     height: 200px;
@@ -54,7 +59,7 @@
     left: 0;
     width: 100%;
     min-width: 1100px;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 54%, #eafb88 57%, #ecf9a5 60%, rgba(39, 140, 79, 0) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, #eafb88 54%, #ecf9a5 60%, rgba(39, 140, 79, 0) 100%);
     ul {
         float: right;
         font-size: 0;;

@@ -24,9 +24,14 @@
         .thumbnail {
             margin: 0 auto;
             width: 100%;
-            padding-bottom: 60%;
-            background: url('../images/route/route-min-1.png') center center;
+            padding-bottom: 56.5%;
+            background: center center;
             background-size: cover;
+            @for $i from 1 through 2 {
+                &-#{$i} {
+                    background-image: url('../images/route/route-#{$i}.png');
+                }
+            }
         }
         h4 {
             padding-top: 16px;
@@ -35,7 +40,10 @@
     }
 }
 
-
+@keyframes routemark {
+    0% { transform: scale(0) }
+    100% { transform: scale(1) }
+}
 
 .dialog {
     display: none;
@@ -75,8 +83,39 @@
             background: #4f695e;
             border-radius: 50%;
         }
-        img {
-            width: 700px;
+        .img-wrapper {
+            position: relative;
+            .mark {
+                position: absolute;
+                width: 120px;
+                height: 185px;
+                background: #000;
+                background: url('../images/sky.png') no-repeat;
+                background-size: 400%;
+                transform-origin: bottom;
+                animation: routemark 1s cubic-bezier(0.40, 0, 0.5, 1.35);
+                @for $i from 1 through 4 {
+                    &-#{$i} {
+                        background-position-x: (100% / 3 * ($i - 1));
+                    }
+                }
+                &-1 {
+                    top: 230px;
+                    left: 320px;
+                }
+                &-2 {
+                    top: 5px;
+                    left: 750px;
+                }
+                &-3 {
+                    top: 125px;
+                    left: 205px;
+                }
+                &-4 {
+                    top: 40px;
+                    left: 500px;
+                }
+            }
         }
         p {
             padding-top: 8px;

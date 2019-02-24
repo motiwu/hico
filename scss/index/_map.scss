@@ -10,8 +10,58 @@
     height: 100vh;
     min-height: 720px;
     background: #f7efce;
+
+
+    &.trans {
+        .map-wrapper {
+            transform: translateX(-50%) scale(1.2);
+        }
+        .events {
+            display: none;
+        }
+    }
+    &:not(.trans) {
+        h3 {
+            display: none;
+        }
+        .btn-back {
+            display: none;
+        }
+    }
+
     .container {
         height: 100%;
+    }
+
+    h3 {
+        position: absolute;
+        z-index: 100;
+        top: 160px;
+        left: 30%;
+    }
+    .btn-back {
+        position: absolute;
+        z-index: 100;
+        top: 140px;
+        left: 25%;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: rgba(#000, 0);
+        border: 1px solid rgba(#fff, .6);
+        transition: .3s;
+        &:hover {
+            box-shadow: 6px 6px 16px rgba(#000, .05);
+            border-color: #fff;
+        }
+        &:active {
+            background: rgba(#fff, .2);
+        }
+        .icon-back {
+            width: 100%;
+            height: 100%;
+            fill: #000;
+        }
     }
 
     .events {
@@ -28,6 +78,9 @@
         }
         .pin-sort {
             white-space: nowrap;
+            &:not(:first-of-type) {
+                margin-top: 20px;
+            }
         }
         .icon-pin {
             display: inline-block;
@@ -49,6 +102,17 @@
                 padding: 0 .5em;
                 line-height: 1.5;
             }
+            .num {
+                display: inline-block;
+                vertical-align: middle;
+                width: 18px;
+                height: 18px;
+                color: #fff;
+                line-height: 18px;
+                text-align: center;
+                background: #004257;
+                border-radius: 50%;
+            }
         }
     }
 
@@ -57,9 +121,6 @@
         z-index: 10;
         height: 100%;
         transition: transform .5s;
-        &.trans {
-            transform: translateX(-50%) scale(1.2);
-        }
         .icon-paint {
             position: absolute;
             z-index: 20;
@@ -397,27 +458,61 @@
                         animation: detailFade #{(.3 + $i * .3)}s forwards;
                     }
                 }
-                .img {
-                    display: inline-block;
-                    vertical-align: middle;
-                    width: 160px;
-                    height: 120px;
-                    border-radius: 16px;
-                    background-size: contain;
-                    @for $i from 1 through 4 {
-                        &-#{$i} {
-                            background-image: url('../images/spots/#{$i}.png');
-                        }
+            }
+            .img {
+                display: inline-block;
+                vertical-align: middle;
+                width: 160px;
+                height: 120px;
+                border-radius: 16px;
+                background-size: contain;
+                @for $i from 11 through 14 {
+                    &-#{$i} {
+                        background-image: url('../images/map/#{$i}.png');
                     }
                 }
-                .intro {
-                    display: inline-block;
-                    vertical-align: middle;
-                    padding-left: 40px;
-                    h5 {
-                        font-size: 22px;
-                        line-height: 2.2;
+            }
+            .intro {
+                display: inline-block;
+                vertical-align: middle;
+                padding-left: 40px;
+                h5 {
+                    font-size: 22px;
+                    line-height: 2.2;
+                }
+            }
+        }
+
+        .detail-nite {
+            &:not(.active) {
+                display: none;
+            }
+            >li {
+                margin: 20px;
+                padding-left: 40px;
+                @for $i from 1 through 4 {
+                    &:nth-child(#{$i}) {
+                        animation: detailFade #{(.3 + $i * .3)}s forwards;
                     }
+                }   
+            }
+            .img {
+                display: inline-block;
+                vertical-align: middle;
+                width: 160px;
+                height: 120px;
+                border-radius: 16px;
+                background-size: contain;
+                @for $i from 21 through 24 {
+                    &-#{$i} {
+                        background-image: url('../images/map/#{$i}.png');
+                    }
+                }
+            }
+            .intro {
+                h5 {
+                    font-size: 22px;
+                    line-height: 2.2;
                 }
             }
         }

@@ -58,6 +58,18 @@
             animation: paint 3s steps(7) alternate-reverse infinite;
         }
     }
+
+    &.sky {
+        width: 133px;
+        height: 210px;
+        background: url('../images/sky.png') center center no-repeat;
+        background-size: 400%;
+        @for $i from 1 through 4 {
+            &-#{$i} {
+                background-position-x: (100% / 3 * ($i - 1));
+            }
+        }
+    }
 }
 div.custom-tooltip {
     &:hover {
