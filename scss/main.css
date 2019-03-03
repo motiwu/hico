@@ -1315,6 +1315,11 @@ div.custom-tooltip span {
   background-image: url("../images/map/38.jpg");
 }
 
+.page-map .details .detail-exp .img-31, .page-map .details .detail-exp .img-32 {
+  width: 240px;
+  height: 180px;
+}
+
 .page-map .details .detail-exp .intro h5 {
   font-size: 22px;
   line-height: 2.2;

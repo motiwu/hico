@@ -584,6 +584,11 @@
                         background-image: url('../images/map/#{$i}.jpg');
                     }
                 }
+                &-31,
+                &-32 {
+                    width: 240px;
+                    height: 180px;
+                }
             }
             .intro {
                 h5 {
