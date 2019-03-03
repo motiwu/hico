@@ -25,12 +25,14 @@
             },
             "scenes": {
                 "sky": {
-                    "title": "天空",
+                    "title": "湖本社區-區域導覽",
                     "hfov": 0,
                     "pitch": -80,
                     "yaw": 20,
                     "type": "equirectangular",
                     "panorama": "images/pano-0.jpg",
+                    "compass": true, // 指北針
+                    "northOffset": 310, // 正北方向
                     "hotSpots": [{
                             "pitch": -118,
                             "yaw": 155,
@@ -67,6 +69,46 @@
                             "sceneId": "bird",
                             "targetYaw": -23,
                             "targetPitch": 2
+                        }, { // 導覽地圖
+                            "cssClass": "fixmap fixmap-sky active",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "湖本社區-區域導覽",
+                            "sceneId": "sky",
+                        }, {
+                            "pitch": 0,
+                            "yaw": 0,
+                            "cssClass": "fixmap fixmap-1",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "湖本生態合作社-歡樂鳥巢",
+                            "sceneId": "nest",
+                        }, {
+                            "pitch": 0,
+                            "yaw": 0,
+                            "cssClass": "fixmap fixmap-2",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "活動中心-向心鳥巢",
+                            "sceneId": "activityCenter",
+                        }, {
+                            "pitch": 0,
+                            "yaw": 0,
+                            "cssClass": "fixmap fixmap-3",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "天聖宮-祈福鳥巢",
+                            "sceneId": "TSTemple",
+                        }, {
+                            "pitch": 0,
+                            "yaw": 0,
+                            "cssClass": "fixmap fixmap-4",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "賞鳥生態導覽步道-尋覓鳥巢",
+                            "sceneId": "bird",
+                        }, {
+                            "pitch": 0,
+                            "yaw": 0,
+                            "cssClass": "fixmap-route",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "",
+                            "sceneId": "sky",
                         }
                     ]
                 },
@@ -91,6 +133,46 @@
                             "cssClass": "custom-hotspot paint-ani-1",
                             "createTooltipFunc": hotspot,
                             "createTooltipArgs": "向心鳥巢<br>此區鳥巢將置入小遊戲，需要多人合作才能達成目標，也象徵著湖本需要大眾同心一起努力，讓湖本變得更加美好。"
+                        }, { // 導覽地圖
+                            "cssClass": "fixmap fixmap-sky",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "湖本社區-區域導覽",
+                            "sceneId": "sky",
+                        }, {
+                            "pitch": 0,
+                            "yaw": 0,
+                            "cssClass": "fixmap fixmap-1",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "湖本生態合作社-歡樂鳥巢",
+                            "sceneId": "nest",
+                        }, {
+                            "pitch": 0,
+                            "yaw": 0,
+                            "cssClass": "fixmap fixmap-2 active",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "活動中心-向心鳥巢",
+                            "sceneId": "activityCenter",
+                        }, {
+                            "pitch": 0,
+                            "yaw": 0,
+                            "cssClass": "fixmap fixmap-3",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "天聖宮-祈福鳥巢",
+                            "sceneId": "TSTemple",
+                        }, {
+                            "pitch": 0,
+                            "yaw": 0,
+                            "cssClass": "fixmap fixmap-4",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "賞鳥生態導覽步道-尋覓鳥巢",
+                            "sceneId": "bird",
+                        }, {
+                            "pitch": 0,
+                            "yaw": 0,
+                            "cssClass": "fixmap-route",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "",
+                            "sceneId": "sky",
                         }
                     ]
                 },
@@ -123,6 +205,46 @@
                             "cssClass": "custom-hotspot paint-ani-2",
                             "createTooltipFunc": hotspot,
                             "createTooltipArgs": "祈福鳥巢<br>旁邊的天聖宮會販售木頭製的葉子狀許願卡，參拜的人可以在上面寫上自己的心願並綁在鳥巢上，祈求心願有朝一日能如雛鳥破殼而出。鳥巢內設有桌子，提供書寫的區域"
+                        }, { // 導覽地圖
+                            "cssClass": "fixmap fixmap-sky",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "湖本社區-區域導覽",
+                            "sceneId": "sky",
+                        }, {
+                            "pitch": 0,
+                            "yaw": 0,
+                            "cssClass": "fixmap fixmap-1",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "湖本生態合作社-歡樂鳥巢",
+                            "sceneId": "nest",
+                        }, {
+                            "pitch": 0,
+                            "yaw": 0,
+                            "cssClass": "fixmap fixmap-2",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "活動中心-向心鳥巢",
+                            "sceneId": "activityCenter",
+                        }, {
+                            "pitch": 0,
+                            "yaw": 0,
+                            "cssClass": "fixmap fixmap-3 active",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "天聖宮-祈福鳥巢",
+                            "sceneId": "TSTemple",
+                        }, {
+                            "pitch": 0,
+                            "yaw": 0,
+                            "cssClass": "fixmap fixmap-4",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "賞鳥生態導覽步道-尋覓鳥巢",
+                            "sceneId": "bird",
+                        }, {
+                            "pitch": 0,
+                            "yaw": 0,
+                            "cssClass": "fixmap-route",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "",
+                            "sceneId": "sky",
                         }
                     ]
                 },
@@ -142,32 +264,62 @@
                             "targetYaw": -23,
                             "targetPitch": 2
                         }, {
-                            "pitch": 5,
-                            "yaw": 60,
-                            "type": "scene",
-                            "text": "湖本生態合作社<br>生態鳥巢",
-                            "sceneId": "nest",
-                            "targetYaw": -23,
-                            "targetPitch": 2
-                        }, {
                             "pitch": -10,
                             "yaw": 150,
                             "cssClass": "custom-hotspot paint-ani-3",
                             "createTooltipFunc": hotspot,
                             "createTooltipArgs": "尋覓鳥巢<br>八色鳥只有特定的季節才會來訪湖本，就算是特定季節能真的一睹八色鳥也不容易，因此這個地點的鳥巢上將會有的八色鳥的裝飾，並在周邊設置音響播放八色鳥的叫聲與環境音，讓參觀的人就算沒看見八色鳥也不至於空手而歸。"
+                        }, { // 導覽地圖
+                            "cssClass": "fixmap fixmap-sky",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "湖本社區-區域導覽",
+                            "sceneId": "sky",
+                        }, {
+                            "pitch": 0,
+                            "yaw": 0,
+                            "cssClass": "fixmap fixmap-1",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "湖本生態合作社-歡樂鳥巢",
+                            "sceneId": "nest",
+                        }, {
+                            "pitch": 0,
+                            "yaw": 0,
+                            "cssClass": "fixmap fixmap-2",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "活動中心-向心鳥巢",
+                            "sceneId": "activityCenter",
+                        }, {
+                            "pitch": 0,
+                            "yaw": 0,
+                            "cssClass": "fixmap fixmap-3",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "天聖宮-祈福鳥巢",
+                            "sceneId": "TSTemple",
+                        }, {
+                            "pitch": 0,
+                            "yaw": 0,
+                            "cssClass": "fixmap fixmap-4 active",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "賞鳥生態導覽步道-尋覓鳥巢",
+                            "sceneId": "bird",
+                        }, {
+                            "pitch": 0,
+                            "yaw": 0,
+                            "cssClass": "fixmap-route",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "",
+                            "sceneId": "sky",
                         }
                     ]
                 },
                 "nest": {
                     "title": "湖本生態合作社-歡樂鳥巢",
-                    "author": "Hico",
+                    // "author": "Hico",
                     "hfov": 110,
                     "pitch": -3,
                     "yaw": 117,
                     "type": "equirectangular",
                     "panorama": "images/pano-4.jpg",
-                    "compass": true, // 指北針
-                    "northOffset": 200, // 正北方向
                     "hotSpots": [
                         {
                             "pitch": -1,
@@ -183,6 +335,46 @@
                             "cssClass": "custom-hotspot paint-ani-4",
                             "createTooltipFunc": hotspot,
                             "createTooltipArgs": "歡樂鳥巢<br>鳥巢內有許多繽紛的氣球，充滿童趣的裝置可以吸引大小朋友到此休憩、玩耍；另外可以配置轉蛋機，可以獲得小小鳥但作為紀念品帶回家。"
+                        }, { // 導覽地圖
+                            "cssClass": "fixmap fixmap-sky",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "湖本社區-區域導覽",
+                            "sceneId": "sky",
+                        }, {
+                            "pitch": 0,
+                            "yaw": 0,
+                            "cssClass": "fixmap fixmap-1 active",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "湖本生態合作社-歡樂鳥巢",
+                            "sceneId": "nest",
+                        }, {
+                            "pitch": 0,
+                            "yaw": 0,
+                            "cssClass": "fixmap fixmap-2",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "活動中心-向心鳥巢",
+                            "sceneId": "activityCenter",
+                        }, {
+                            "pitch": 0,
+                            "yaw": 0,
+                            "cssClass": "fixmap fixmap-3",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "天聖宮-祈福鳥巢",
+                            "sceneId": "TSTemple",
+                        }, {
+                            "pitch": 0,
+                            "yaw": 0,
+                            "cssClass": "fixmap fixmap-4",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "賞鳥生態導覽步道-尋覓鳥巢",
+                            "sceneId": "bird",
+                        }, {
+                            "pitch": 0,
+                            "yaw": 0,
+                            "cssClass": "fixmap-route",
+                            "createTooltipFunc": hotspot,
+                            "createTooltipArgs": "",
+                            "sceneId": "sky",
                         }
                     ],
                 },

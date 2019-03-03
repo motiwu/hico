@@ -109,6 +109,14 @@ select, input {
   height: 100vh;
 }
 
+.pnlm-title-box {
+  color: #fff;
+}
+
+.pnlm-author-box {
+  color: #ececec;
+}
+
 @-webkit-keyframes paint {
   from {
     background-position-x: 0;
@@ -222,6 +230,93 @@ div.custom-tooltip span {
   padding: 5px 10px;
   margin-left: -220px;
   cursor: default;
+}
+
+.fixmap {
+  position: fixed !important;
+  top: unset !important;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  -webkit-transform: none !important;
+          transform: none !important;
+  visibility: visible !important;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+  background: rgba(233, 252, 231, 0.6) center center no-repeat;
+}
+
+.fixmap:before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  bottom: -6px;
+  left: -6px;
+  border: 2px solid rgba(233, 252, 231, 0.6);
+  border-radius: 50%;
+  -webkit-transition: border-color .3s;
+  transition: border-color .3s;
+}
+
+.fixmap.active, .fixmap:hover {
+  background-color: #fff;
+}
+
+.fixmap.active:before, .fixmap:hover:before {
+  border-color: #fff;
+}
+
+.fixmap-sky {
+  right: 515px;
+  bottom: 20px !important;
+  background-image: url("../images/event/detail.png");
+  background-position: 0 0;
+  background-size: 500%;
+}
+
+.fixmap-1 {
+  right: 722px;
+  bottom: 65px !important;
+  background-image: url("../images/event/title-1.png");
+  background-size: contain;
+}
+
+.fixmap-2 {
+  right: 515px;
+  bottom: 129px !important;
+  background-image: url("../images/event/title-3.png");
+  background-size: contain;
+}
+
+.fixmap-3 {
+  right: 271px;
+  bottom: 100px !important;
+  background-image: url("../images/event/title-2.png");
+  background-size: contain;
+}
+
+.fixmap-4 {
+  right: 97px;
+  bottom: 15px !important;
+  background-image: url("../images/event/title-4.png");
+  background-size: contain;
+}
+
+.fixmap-route {
+  position: fixed !important;
+  top: unset !important;
+  bottom: 20px !important;
+  -webkit-transform: none !important;
+          transform: none !important;
+  visibility: visible !important;
+  right: 0;
+  width: 900px;
+  height: 140px;
+  background: url(../images/fixmap-route.svg) center center no-repeat;
+  border-radius: 0;
+  pointer-events: none !important;
 }
 
 :root {
