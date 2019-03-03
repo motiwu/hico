@@ -2,7 +2,7 @@ function toggleMarks(type) {
     let marks = [
         document.getElementById('marks-heart'),
         document.getElementById('marks-nite'),
-        // document.getElementById('marks-expo'),
+        document.getElementById('marks-exp'),
         document.getElementById('marks-info'),
     ];
 
@@ -15,14 +15,16 @@ function toggleMarks(type) {
 
 //page-route
 
-function openDialog(i) {
-    let dialog = document.getElementById('dialog-route-' + i);
-    dialog.getElementsByTagName('img')[0].src = 'images/route/route-' + i +'.png';
+function openDialog(type, code) {
+    let dialog = document.getElementById('dialog-' + type + '-' +  code);
+    if (type === 'route') {
+        dialog.getElementsByTagName('img')[0].src = 'images/route/route-' + code +'.png';
+    }
     dialog.classList.add('active');
 }
 
-function closeDialog(i) {
-    let dialog = document.getElementById('dialog-route-' + i);
+function closeDialog(type, code) {
+    let dialog = document.getElementById('dialog-' + type + '-' +  code);
     dialog.classList.remove('active');
 }
 
@@ -74,7 +76,7 @@ function prevevent() {
 // page-map
 
 
-const mapTypes = ['heart', 'nite'];
+const mapCodes = [11, 12, 13, 14, 21, 22, 23, 24];
 
 function maptrans() {
     document.getElementById('page-map').classList.add('trans');
@@ -84,14 +86,19 @@ function maptransClose() {
     document.getElementById('page-map').classList.remove('trans');
 }
 
-function mapmark(type) {
+function mapmark(code) {
     maptrans();
-    document.getElementById('detail-' + type).classList.add('active');
+    mapCodes.forEach(mt => {
+        if(document.getElementById('detail-' + mt)) {
+            document.getElementById('detail-' + mt).classList.remove('active');
+        }
+    });
+    document.getElementById('detail-' + code).classList.add('active');
 }
 
 function mapmarkRemove() {
     maptransClose();
-    mapTypes.forEach(mt => {
+    mapCodes.forEach(mt => {
         if(document.getElementById('detail-' + mt)) {
             document.getElementById('detail-' + mt).classList.remove('active');
         }

@@ -45,80 +45,45 @@
     100% { transform: scale(1) }
 }
 
-.dialog {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    text-align: center;
-    background: rgba(#000, .2);
-    &:before {
-        content: '';
-        display: inline-block;
-        vertical-align: middle;
-        height: 100%;
-    }
-    &.active {
-        display: block;
-    }
+.dialog-route {
     .dialog-content {
-        position: relative;
-        display: inline-block;
-        vertical-align: middle;
         padding: 16px;
-        max-width: 90%;
-        text-align: left;
-        background: #fff;
-        .btn-x {
+    }
+    .img-wrapper {
+        position: relative;
+        .mark {
             position: absolute;
-            top: -20px;
-            right: -20px;
-            width: 40px;
-            height: 40px;
-            color: #fff;
-            font-size: 28px;
-            background: #4f695e;
-            border-radius: 50%;
-        }
-        .img-wrapper {
-            position: relative;
-            .mark {
-                position: absolute;
-                width: 120px;
-                height: 185px;
-                background: #000;
-                background: url('../images/sky.png') no-repeat;
-                background-size: 400%;
-                transform-origin: bottom;
-                animation: routemark 1s cubic-bezier(0.40, 0, 0.5, 1.35);
-                @for $i from 1 through 4 {
-                    &-#{$i} {
-                        background-position-x: (100% / 3 * ($i - 1));
-                    }
-                }
-                &-1 {
-                    top: 230px;
-                    left: 320px;
-                }
-                &-2 {
-                    top: 5px;
-                    left: 750px;
-                }
-                &-3 {
-                    top: 125px;
-                    left: 205px;
-                }
-                &-4 {
-                    top: 40px;
-                    left: 500px;
+            width: 120px;
+            height: 185px;
+            background: #000;
+            background: url('../images/sky.png') no-repeat;
+            background-size: 400%;
+            transform-origin: bottom;
+            animation: routemark 1s cubic-bezier(0.40, 0, 0.5, 1.35);
+            @for $i from 1 through 4 {
+                &-#{$i} {
+                    background-position-x: (100% / 3 * ($i - 1));
                 }
             }
+            &-1 {
+                top: 230px;
+                left: 320px;
+            }
+            &-2 {
+                top: 5px;
+                left: 750px;
+            }
+            &-3 {
+                top: 125px;
+                left: 205px;
+            }
+            &-4 {
+                top: 40px;
+                left: 500px;
+            }
         }
-        p {
-            padding-top: 8px;
-        }
+    }
+    p {
+        padding-top: 8px;
     }
 }

@@ -69,12 +69,21 @@
         z-index: 20;
         &-1 {
             top: 20%;
+            .num {
+                background: #004257;
+            }
         }
         &-2 {
             top: 60%;
+            .num {
+                background: #004257;
+            }
         }
         &-3 {
             top: 85%;
+            .num {
+                background: #004257;
+            }
         }
         .pin-sort {
             white-space: nowrap;
@@ -110,7 +119,6 @@
                 color: #fff;
                 line-height: 18px;
                 text-align: center;
-                background: #004257;
                 border-radius: 50%;
             }
         }
@@ -387,6 +395,38 @@
                     }
                 }
             }
+            &-exp {
+                .mark {
+                    &-1 {
+                        top: 46%;
+                        left: 51%;
+                    }
+                    &-2 {
+                        top: 45%;
+                        left: 63%;
+                    }
+                    &-3 {
+                        top: 47.5%;
+                        left: 67%;
+                    }
+                    &-4 {
+                        top: 50%;
+                        left: 75.5%;
+                    }
+                    &-5 {
+                        top: 58%;
+                        left: 76%;
+                    }
+                    &-6 {
+                        top: 77%;
+                        left: 82%;
+                    }
+                    &-7 {
+                        top: 47%;
+                        left: 83%;
+                    }
+                }
+            }
             &-info {
                 .mark {
                     &-1 {
@@ -408,7 +448,7 @@
             position: absolute;
             z-index: 30;
             animation: mark;
-            @for $i from 1 through 4 {
+            @for $i from 1 through 7 {
                 &-#{$i} {
                     animation-duration: #{$i * .2 + .15}s;
                 }
@@ -423,6 +463,15 @@
                         transform: translate(-50%, -10px);
                     }
                 }
+            }
+            .code {
+                position: absolute;
+                top: 1px;
+                width: 100%;
+                text-align: center;
+                color: rgba(255, 255, 255, 0.7);
+                font-size: 12px;
+                pointer-events: none;
             }
             h5 {
                 position: absolute;
@@ -448,22 +497,21 @@
         left: 60%;
         top: 20%;
         .detail-heart {
-            &:not(.active) {
-                display: none;
-            }
             >li {
-                margin: 20px;
-                @for $i from 1 through 4 {
-                    &:nth-child(#{$i}) {
-                        animation: detailFade #{(.3 + $i * .3)}s forwards;
-                    }
+                &:not(.active) {
+                    display: none;
                 }
+                margin: 20px 0 0 50px;
+                animation: detailFade .9s forwards;
+                // @for $i from 1 through 4 {
+                //     &:nth-child(#{$i}) {
+                //         animation: detailFade #{(.3 + $i * .3)}s forwards;
+                //     }
+                // }
             }
             .img {
-                display: inline-block;
-                vertical-align: middle;
-                width: 160px;
-                height: 120px;
+                width: 320px;
+                height: 240px;
                 border-radius: 16px;
                 background-size: contain;
                 @for $i from 11 through 14 {
@@ -473,9 +521,7 @@
                 }
             }
             .intro {
-                display: inline-block;
-                vertical-align: middle;
-                padding-left: 40px;
+                padding-top: 20px;
                 h5 {
                     font-size: 22px;
                     line-height: 2.2;
@@ -484,17 +530,17 @@
         }
 
         .detail-nite {
-            &:not(.active) {
-                display: none;
-            }
             >li {
+                &:not(.active) {
+                    display: none;
+                }
                 margin: 20px;
                 padding-left: 40px;
-                @for $i from 1 through 4 {
-                    &:nth-child(#{$i}) {
-                        animation: detailFade #{(.3 + $i * .3)}s forwards;
-                    }
-                }   
+                // @for $i from 1 through 4 {
+                //     &:nth-child(#{$i}) {
+                //         animation: detailFade #{(.3 + $i * .3)}s forwards;
+                //     }
+                // }   
             }
             .img {
                 display: inline-block;

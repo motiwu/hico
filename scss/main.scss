@@ -2,13 +2,6 @@
 @import 'reset';
 @import 'panorama';
 
-@import 'index/index';
-@import 'index/map';
-@import 'index/bird';
-@import 'index/spots';
-@import 'index/route';
-@import 'index/event';
-
 :root {
     --currentSpot: 0; // 顯示第幾張 0,1,2...
     --currentEvent: 0; // 顯示第幾張 0,1,2...
@@ -38,17 +31,21 @@
     height: 200px;
     background: linear-gradient(to bottom, #cfe4e4 0%, #f7efce 180px);
 }
-.bridge-map-bird {
-    height: 200px;
-    background: linear-gradient(to bottom, #f7efce 0%, #fff 180px);
-}
+// .bridge-map-bird {
+//     height: 200px;
+//     background: linear-gradient(to bottom, #f7efce 0%, #fff 180px);
+// }
 // .bridge-bird-spots {
 //     height: 200px;
 //     background: linear-gradient(to bottom, #f7efce 0%, #CDE0D0 180px);
 // }
-.bridge-spots-route {
+// .bridge-spots-route {
+//     height: 200px;
+//     background: linear-gradient(to bottom, #CDE0D0 0%, #bbd1de 180px);
+// }
+.bridge-map-route {
     height: 200px;
-    background: linear-gradient(to bottom, #CDE0D0 0%, #bbd1de 180px);
+    background: linear-gradient(to bottom, #f7efce 0%, #bbd1de 180px);
 }
 
 
@@ -95,3 +92,62 @@
         }
     }
 }
+
+
+
+
+
+
+.dialog {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    background: rgba(#000, .2);
+    &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+    }
+    &.active {
+        display: block;
+    }
+    .dialog-content {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 90%;
+        text-align: left;
+        background: #fff;
+        .btn-x {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 40px;
+            height: 40px;
+            color: #fff;
+            font-size: 28px;
+            background: #4f695e;
+            border-radius: 50%;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+@import 'index/index';
+@import 'index/map';
+@import 'index/bird';
+@import 'index/spots';
+@import 'index/route';
+@import 'index/event';
