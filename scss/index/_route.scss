@@ -6,6 +6,15 @@
         font-size: 40px;
         line-height: 5;
         text-align: center;
+        a {
+            display: inline-block;
+            margin-left: 10px;
+            width: 40px;
+            height: 40px;
+            background: url(../images/icon-link.png);
+            background-size: contain;
+            vertical-align: sub;
+        }
     }
 
     .route {
@@ -15,6 +24,11 @@
         width: 48%;
         background: #fff;
         border-radius: 10px;
+        transition: box-shadow .2s;
+        cursor: pointer;
+        &:hover {
+            box-shadow: 6px 6px 26px rgba(#000, .2);
+        }
         &:nth-of-type(even) {
             margin-left: 4%;
         }
@@ -53,17 +67,22 @@
         position: relative;
         .mark {
             position: absolute;
+            // display: inline;
             width: 120px;
             height: 185px;
             background: #000;
             background: url('../images/sky.png') no-repeat;
             background-size: 400%;
             transform-origin: bottom;
+            transition: transform .2s;
             animation: routemark 1s cubic-bezier(0.40, 0, 0.5, 1.35);
             @for $i from 1 through 4 {
                 &-#{$i} {
                     background-position-x: (100% / 3 * ($i - 1));
                 }
+            }
+            &:hover {
+                transform: scale(1.05);
             }
             &-1 {
                 top: 230px;
@@ -85,5 +104,26 @@
     }
     p {
         padding-top: 8px;
+    }
+    .link {
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+        border-bottom: 1px solid #4c7daf;
+        color: #000000;
+        &:hover {
+            color: #798991;
+        }
+        &:active {
+            color: #586d77;
+        }
+        .icon-link {
+            display: inline-block;
+            vertical-align: sub;
+            width: 24px;
+            height: 24px;
+            background: url('../images/icon-link.png') no-repeat;
+            background-size: contain;
+        }
     }
 }

@@ -648,24 +648,12 @@ div.custom-tooltip span {
   top: 20%;
 }
 
-.page-map .events-1 .num {
-  background: #004257;
-}
-
 .page-map .events-2 {
-  top: 60%;
-}
-
-.page-map .events-2 .num {
-  background: #004257;
+  top: 55%;
 }
 
 .page-map .events-3 {
   top: 85%;
-}
-
-.page-map .events-3 .num {
-  background: #004257;
 }
 
 .page-map .events .pin-sort {
@@ -677,16 +665,34 @@ div.custom-tooltip span {
 }
 
 .page-map .events .icon-pin {
-  display: inline-block;
   vertical-align: middle;
   margin-right: 8px;
   width: 20px;
   height: 40px;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+.page-map .events .icon-pin.heart ~ .list .num {
+  background: #cb4750;
+}
+
+.page-map .events .icon-pin.nite ~ .list .num {
+  background: #ea7f27;
+}
+
+.page-map .events .icon-pin.exp ~ .list .num {
+  background: #004257;
+}
+
+.page-map .events h5 {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 18px;
+  border-bottom: 2px solid #456;
 }
 
 .page-map .events .list {
-  display: inline-block;
-  vertical-align: middle;
   padding: .5em 0;
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.4);
@@ -694,6 +700,16 @@ div.custom-tooltip span {
   -webkit-box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.05);
           box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.05);
   cursor: pointer;
+  -webkit-transition: background .2s;
+  transition: background .2s;
+}
+
+.page-map .events .list:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.page-map .events .list:active {
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .page-map .events .list > li {
@@ -1057,11 +1073,6 @@ div.custom-tooltip span {
   left: 63%;
 }
 
-.page-map .map-wrapper .marks-info .mark-2 {
-  top: 44%;
-  left: 73%;
-}
-
 .page-map .map-wrapper .marks:not(.active) {
   display: none;
 }
@@ -1178,14 +1189,17 @@ div.custom-tooltip span {
   top: 20%;
 }
 
-.page-map .details .detail-heart > li {
-  margin: 20px 0 0 50px;
+.page-map .details .detail > li {
   -webkit-animation: detailFade .9s forwards;
           animation: detailFade .9s forwards;
 }
 
-.page-map .details .detail-heart > li:not(.active) {
+.page-map .details .detail > li:not(.active) {
   display: none;
+}
+
+.page-map .details .detail-heart > li {
+  margin: 20px 0 0 50px;
 }
 
 .page-map .details .detail-heart .img {
@@ -1225,10 +1239,6 @@ div.custom-tooltip span {
   padding-left: 40px;
 }
 
-.page-map .details .detail-nite > li:not(.active) {
-  display: none;
-}
-
 .page-map .details .detail-nite .img {
   display: inline-block;
   vertical-align: middle;
@@ -1255,6 +1265,57 @@ div.custom-tooltip span {
 }
 
 .page-map .details .detail-nite .intro h5 {
+  font-size: 22px;
+  line-height: 2.2;
+}
+
+.page-map .details .detail-exp > li {
+  margin: 20px;
+  padding-left: 40px;
+}
+
+.page-map .details .detail-exp .img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 320px;
+  height: 240px;
+  border-radius: 16px;
+  background-size: contain;
+}
+
+.page-map .details .detail-exp .img-31 {
+  background-image: url("../images/map/31.jpg");
+}
+
+.page-map .details .detail-exp .img-32 {
+  background-image: url("../images/map/32.jpg");
+}
+
+.page-map .details .detail-exp .img-33 {
+  background-image: url("../images/map/33.jpg");
+}
+
+.page-map .details .detail-exp .img-34 {
+  background-image: url("../images/map/34.jpg");
+}
+
+.page-map .details .detail-exp .img-35 {
+  background-image: url("../images/map/35.jpg");
+}
+
+.page-map .details .detail-exp .img-36 {
+  background-image: url("../images/map/36.jpg");
+}
+
+.page-map .details .detail-exp .img-37 {
+  background-image: url("../images/map/37.jpg");
+}
+
+.page-map .details .detail-exp .img-38 {
+  background-image: url("../images/map/38.jpg");
+}
+
+.page-map .details .detail-exp .intro h5 {
   font-size: 22px;
   line-height: 2.2;
 }
@@ -1370,6 +1431,11 @@ div.custom-tooltip span {
           box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.05);
 }
 
+.page-spots .slider-wrapper .btn-prev:active {
+  -webkit-box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.05) inset;
+          box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.05) inset;
+}
+
 .page-spots .slider-wrapper .btn-next {
   right: calc(50% - 595px);
   -webkit-transform: rotate(180deg);
@@ -1379,6 +1445,11 @@ div.custom-tooltip span {
 .page-spots .slider-wrapper .btn-next:hover {
   -webkit-box-shadow: -6px -6px 16px rgba(0, 0, 0, 0.05);
           box-shadow: -6px -6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.page-spots .slider-wrapper .btn-next:active {
+  -webkit-box-shadow: -6px -6px 16px rgba(0, 0, 0, 0.05) inset;
+          box-shadow: -6px -6px 16px rgba(0, 0, 0, 0.05) inset;
 }
 
 .page-spots .slider {
@@ -1503,6 +1574,16 @@ div.custom-tooltip span {
   text-align: center;
 }
 
+.page-route h2 a {
+  display: inline-block;
+  margin-left: 10px;
+  width: 40px;
+  height: 40px;
+  background: url(../images/icon-link.png);
+  background-size: contain;
+  vertical-align: sub;
+}
+
 .page-route .route {
   float: left;
   -webkit-box-sizing: border-box;
@@ -1511,6 +1592,16 @@ div.custom-tooltip span {
   width: 48%;
   background: #fff;
   border-radius: 10px;
+  -webkit-transition: -webkit-box-shadow .2s;
+  transition: -webkit-box-shadow .2s;
+  transition: box-shadow .2s;
+  transition: box-shadow .2s, -webkit-box-shadow .2s;
+  cursor: pointer;
+}
+
+.page-route .route:hover {
+  -webkit-box-shadow: 6px 6px 26px rgba(0, 0, 0, 0.2);
+          box-shadow: 6px 6px 26px rgba(0, 0, 0, 0.2);
 }
 
 .page-route .route:nth-of-type(even) {
@@ -1581,6 +1672,10 @@ div.custom-tooltip span {
   background-size: 400%;
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
   -webkit-animation: routemark 1s cubic-bezier(0.4, 0, 0.5, 1.35);
           animation: routemark 1s cubic-bezier(0.4, 0, 0.5, 1.35);
 }
@@ -1599,6 +1694,11 @@ div.custom-tooltip span {
 
 .dialog-route .img-wrapper .mark-4 {
   background-position-x: 100%;
+}
+
+.dialog-route .img-wrapper .mark:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .dialog-route .img-wrapper .mark-1 {
@@ -1623,6 +1723,31 @@ div.custom-tooltip span {
 
 .dialog-route p {
   padding-top: 8px;
+}
+
+.dialog-route .link {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  border-bottom: 1px solid #4c7daf;
+  color: #000000;
+}
+
+.dialog-route .link:hover {
+  color: #798991;
+}
+
+.dialog-route .link:active {
+  color: #586d77;
+}
+
+.dialog-route .link .icon-link {
+  display: inline-block;
+  vertical-align: sub;
+  width: 24px;
+  height: 24px;
+  background: url("../images/icon-link.png") no-repeat;
+  background-size: contain;
 }
 
 .page-event {
@@ -1692,6 +1817,11 @@ div.custom-tooltip span {
           box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.05);
 }
 
+.page-event .slider-wrapper .btn-prev:active {
+  -webkit-box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.05) inset;
+          box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.05) inset;
+}
+
 .page-event .slider-wrapper .btn-next {
   right: calc(50% - 595px);
   -webkit-transform: rotate(180deg);
@@ -1701,6 +1831,11 @@ div.custom-tooltip span {
 .page-event .slider-wrapper .btn-next:hover {
   -webkit-box-shadow: -6px -6px 16px rgba(0, 0, 0, 0.05);
           box-shadow: -6px -6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.page-event .slider-wrapper .btn-next:active {
+  -webkit-box-shadow: -6px -6px 16px rgba(0, 0, 0, 0.05) inset;
+          box-shadow: -6px -6px 16px rgba(0, 0, 0, 0.05) inset;
 }
 
 .page-event .slider {
@@ -1856,6 +1991,16 @@ div.custom-tooltip span {
   background: none;
 }
 
+.page-event .slider .btn-deatil:hover .img {
+  -webkit-box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.page-event .slider .btn-deatil:active .img {
+  -webkit-box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2) inset;
+          box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2) inset;
+}
+
 .page-event .slider .btn-deatil-1 .img {
   background-position-x: 0%;
 }
@@ -1883,6 +2028,10 @@ div.custom-tooltip span {
   background-image: url("../images/event/detail.png");
   background-size: 500%;
   border-radius: 14px;
+  -webkit-transition: -webkit-box-shadow .2s;
+  transition: -webkit-box-shadow .2s;
+  transition: box-shadow .2s;
+  transition: box-shadow .2s, -webkit-box-shadow .2s;
 }
 
 .page-event .slider .btn-deatil span {

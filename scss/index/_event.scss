@@ -47,12 +47,18 @@
                 &:hover {
                     box-shadow: 6px 6px 16px rgba(#000, .05);
                 }
+                &:active {
+                    box-shadow: 6px 6px 16px rgba(#000, .05) inset;
+                }
             }
             &-next {
                 right: calc(50% - 595px);
                 transform: rotate(180deg);
                 &:hover {
                     box-shadow: -6px -6px 16px rgba(#000, .05);
+                }
+                &:active {
+                    box-shadow: -6px -6px 16px rgba(#000, .05) inset;
                 }
             }
         }
@@ -166,6 +172,16 @@
         .btn-deatil {
             border: 0;
             background: none;
+            &:hover {
+                .img {
+                    box-shadow: 2px 2px 12px rgba(#000, .2);
+                }
+            }
+            &:active {
+                .img {
+                    box-shadow: 2px 2px 12px rgba(#000, .2) inset;
+                }
+            }
             @for $i from 1 through 5 {
                 &-#{$i} {
                     .img {
@@ -180,6 +196,7 @@
                 background-image: url('../images/event/detail.png');
                 background-size: 500%;
                 border-radius: 14px;
+                transition: box-shadow .2s;
             }
             span {
                 line-height: 1.6;

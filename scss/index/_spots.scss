@@ -46,12 +46,18 @@
                 &:hover {
                     box-shadow: 6px 6px 16px rgba(#000, .05);
                 }
+                &:active {
+                    box-shadow: 6px 6px 16px rgba(#000, .05) inset;
+                }
             }
             &-next {
                 right: calc(50% - 595px);
                 transform: rotate(180deg);
                 &:hover {
                     box-shadow: -6px -6px 16px rgba(#000, .05);
+                }
+                &:active {
+                    box-shadow: -6px -6px 16px rgba(#000, .05) inset;
                 }
             }
         }

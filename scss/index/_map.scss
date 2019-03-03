@@ -69,21 +69,12 @@
         z-index: 20;
         &-1 {
             top: 20%;
-            .num {
-                background: #004257;
-            }
         }
         &-2 {
-            top: 60%;
-            .num {
-                background: #004257;
-            }
+            top: 55%;
         }
         &-3 {
             top: 85%;
-            .num {
-                background: #004257;
-            }
         }
         .pin-sort {
             white-space: nowrap;
@@ -92,21 +83,47 @@
             }
         }
         .icon-pin {
-            display: inline-block;
             vertical-align: middle;
             margin-right: 8px;
             width: 20px;
             height: 40px;
+            transform: rotate(10deg);
+            &.heart ~ .list {
+                .num {
+                    background: #cb4750;
+                }
+            }
+            &.nite ~ .list {
+                .num {
+                    background: #ea7f27;
+                }
+            }
+            &.exp ~ .list {
+                .num {
+                    background: #004257;
+                }
+            }
         }
-        .list {
+        h5 {
             display: inline-block;
             vertical-align: middle;
+            font-size: 18px;
+            border-bottom: 2px solid #456;
+        }
+        .list {
             padding: .5em 0;
             background: rgba(#fff, .2);
             border: 1px solid rgba(#fff, .4);
             border-radius: 8px;
             box-shadow: 2px 2px 20px rgba(0,0,0,.05);
             cursor: pointer;
+            transition: background .2s;
+            &:hover {
+                background: rgba(#fff, .6);
+            }
+            &:active {
+                background: rgba(#000, .1);
+            }
             >li {
                 padding: 0 .5em;
                 line-height: 1.5;
@@ -433,10 +450,6 @@
                         top: 45%;
                         left: 63%;
                     }
-                    &-2 {
-                        top: 44%;
-                        left: 73%;
-                    }
                 }
             }
             &:not(.active) {
@@ -496,18 +509,17 @@
         position: absolute;
         left: 60%;
         top: 20%;
-        .detail-heart {
+        .detail {
             >li {
                 &:not(.active) {
                     display: none;
                 }
-                margin: 20px 0 0 50px;
                 animation: detailFade .9s forwards;
-                // @for $i from 1 through 4 {
-                //     &:nth-child(#{$i}) {
-                //         animation: detailFade #{(.3 + $i * .3)}s forwards;
-                //     }
-                // }
+            }
+        }
+        .detail-heart {
+            >li {
+                margin: 20px 0 0 50px;
             }
             .img {
                 width: 320px;
@@ -531,16 +543,8 @@
 
         .detail-nite {
             >li {
-                &:not(.active) {
-                    display: none;
-                }
                 margin: 20px;
-                padding-left: 40px;
-                // @for $i from 1 through 4 {
-                //     &:nth-child(#{$i}) {
-                //         animation: detailFade #{(.3 + $i * .3)}s forwards;
-                //     }
-                // }   
+                padding-left: 40px; 
             }
             .img {
                 display: inline-block;
@@ -563,5 +567,30 @@
             }
         }
         
+        .detail-exp {
+            >li {
+                margin: 20px;
+                padding-left: 40px; 
+            }
+            .img {
+                display: inline-block;
+                vertical-align: middle;
+                width: 320px;
+                height: 240px;
+                border-radius: 16px;
+                background-size: contain;
+                @for $i from 31 through 38 {
+                    &-#{$i} {
+                        background-image: url('../images/map/#{$i}.jpg');
+                    }
+                }
+            }
+            .intro {
+                h5 {
+                    font-size: 22px;
+                    line-height: 2.2;
+                }
+            }
+        }
     }
 }

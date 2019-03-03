@@ -5,6 +5,23 @@ function toggleMarks(type) {
         document.getElementById('marks-exp'),
         document.getElementById('marks-info'),
     ];
+    
+    
+    let text;
+    switch(type) {
+        case 'heart':
+            text = '心心相印鳥巢造型裝置展示品';
+            break;
+        case 'nite':
+            text = '點亮湖本燈光裝置展示品';
+            break;
+        case 'exp':
+            text = '遊程體驗';
+            break;
+        case 'info':
+            text = '資訊站';
+    }
+    document.getElementById('map-title').innerHTML = text;
 
     marks.forEach(mark => {
         mark.classList.remove('active');
@@ -76,7 +93,7 @@ function prevevent() {
 // page-map
 
 
-const mapCodes = [11, 12, 13, 14, 21, 22, 23, 24];
+const mapCodes = [11, 12, 13, 14, 21, 22, 23, 24, 31, 32, 33, 34, 35, 36, 37];
 
 function maptrans() {
     document.getElementById('page-map').classList.add('trans');
