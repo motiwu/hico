@@ -449,6 +449,48 @@ div.custom-tooltip span {
   border-radius: 50%;
 }
 
+.btn-audio {
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+  width: 60px;
+  height: 60px;
+  background: #525252;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.btn-audio:hover {
+  background: #5f5f5f;
+}
+
+.btn-audio.active .icon-audio {
+  fill: #fce1ab;
+  opacity: 1;
+}
+
+.btn-audio.active:hover .icon-audio {
+  opacity: 1;
+}
+
+.btn-audio:not(.active):hover .icon-audio {
+  opacity: .8;
+}
+
+.btn-audio .icon-audio {
+  width: 40px;
+  height: 40px;
+  fill: #fffde6;
+  opacity: .4;
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.4));
+          filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.4));
+}
+
 @-webkit-keyframes mountain {
   0%, 66% {
     -webkit-transform: scale(1.2, 0.8);

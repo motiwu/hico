@@ -121,3 +121,21 @@ function mapmarkRemove() {
         }
     });
 }
+
+
+
+
+// audio
+
+function toggleAudio() {
+    
+    let audio = document.getElementById('audio-background');
+    let btn = document.getElementById('btn-audio');
+    if(audio.paused) {
+        audio.play();
+        btn.classList.add('active');
+    } else {
+        audio.pause();
+        btn.classList.remove('active');
+    }
+}
