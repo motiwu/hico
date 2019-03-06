@@ -340,19 +340,19 @@ div.custom-tooltip span {
   fill: #EDB139;
 }
 
-.bridge-index-event {
+.bridge-index-map {
   height: 200px;
-  background: linear-gradient(to bottom, #fff 0%, #cfe4e4 180px);
+  background: linear-gradient(to bottom, #fff 0%, #f7efce 180px);
 }
 
-.bridge-event-map {
+.bridge-map-event {
   height: 200px;
-  background: linear-gradient(to bottom, #cfe4e4 0%, #f7efce 180px);
+  background: linear-gradient(to bottom, #f7efce 0%, #cfe4e4 180px);
 }
 
-.bridge-map-route {
+.bridge-event-route {
   height: 200px;
-  background: linear-gradient(to bottom, #f7efce 0%, #bbd1de 180px);
+  background: linear-gradient(to bottom, #cfe4e4 0%, #bbd1de 180px);
 }
 
 .nav-top {
@@ -808,7 +808,7 @@ div.custom-tooltip span {
 }
 
 .page-map .map-wrapper .icon-paint-center {
-  top: 46%;
+  top: 48%;
   right: 27%;
   width: 60px;
   height: 50px;
@@ -816,8 +816,8 @@ div.custom-tooltip span {
 }
 
 .page-map .map-wrapper .icon-paint-corp {
-  top: 38%;
-  right: 31%;
+  top: 43%;
+  right: 33%;
   width: 55px;
   height: 55px;
   background-image: url("../images/svg-paint/corp.svg");
@@ -1284,8 +1284,8 @@ div.custom-tooltip span {
 .page-map .details .detail-nite .img {
   display: inline-block;
   vertical-align: middle;
-  width: 160px;
-  height: 120px;
+  width: 320px;
+  height: 240px;
   border-radius: 16px;
   background-size: contain;
 }
@@ -1304,6 +1304,11 @@ div.custom-tooltip span {
 
 .page-map .details .detail-nite .img-24 {
   background-image: url("../images/map/24.png");
+}
+
+.page-map .details .detail-nite .img-22, .page-map .details .detail-nite .img-23 {
+  width: 240px;
+  height: 180px;
 }
 
 .page-map .details .detail-nite .intro h5 {

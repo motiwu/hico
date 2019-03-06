@@ -170,15 +170,15 @@
                 background-image: url('../images/svg-paint/camp.svg');
             }
             &-center {
-                top: 46%;
+                top: 48%;
                 right: 27%;
                 width: 60px;
                 height: 50px;
                 background-image: url('../images/svg-paint/center.svg');
             }
             &-corp {
-                top: 38%;
-                right: 31%;
+                top: 43%;
+                right: 33%;
                 width: 55px;
                 height: 55px;
                 background-image: url('../images/svg-paint/corp.svg');
@@ -549,14 +549,19 @@
             .img {
                 display: inline-block;
                 vertical-align: middle;
-                width: 160px;
-                height: 120px;
+                width: 320px;
+                height: 240px;
                 border-radius: 16px;
                 background-size: contain;
                 @for $i from 21 through 24 {
                     &-#{$i} {
                         background-image: url('../images/map/#{$i}.png');
                     }
+                }
+                &-22,
+                &-23 {
+                    width: 240px;
+                    height: 180px;
                 }
             }
             .intro {

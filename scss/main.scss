@@ -23,13 +23,13 @@
 }
 
 
-.bridge-index-event {
+.bridge-index-map {
     height: 200px;
-    background: linear-gradient(to bottom, #fff 0%, #cfe4e4 180px);
+    background: linear-gradient(to bottom, #fff 0%, #f7efce 180px);
 }
-.bridge-event-map {
+.bridge-map-event {
     height: 200px;
-    background: linear-gradient(to bottom, #cfe4e4 0%, #f7efce 180px);
+    background: linear-gradient(to bottom, #f7efce 0%, #cfe4e4 180px);
 }
 // .bridge-map-bird {
 //     height: 200px;
@@ -43,9 +43,9 @@
 //     height: 200px;
 //     background: linear-gradient(to bottom, #CDE0D0 0%, #bbd1de 180px);
 // }
-.bridge-map-route {
+.bridge-event-route {
     height: 200px;
-    background: linear-gradient(to bottom, #f7efce 0%, #bbd1de 180px);
+    background: linear-gradient(to bottom, #cfe4e4 0%, #bbd1de 180px);
 }
 
 

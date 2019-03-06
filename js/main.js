@@ -38,6 +38,10 @@ function openDialog(type, code) {
         dialog.getElementsByTagName('img')[0].src = 'images/route/route-' + code +'.png';
     }
     dialog.classList.add('active');
+    if(type === 'event', code === 3) {
+        document.getElementById('audio-bird').volume = 0.2;
+        document.getElementById('audio-bird').play();
+    }
 }
 
 function closeDialog(type, code) {
