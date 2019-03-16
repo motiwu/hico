@@ -366,6 +366,64 @@ div.custom-tooltip span {
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, #eafb88 54%, #ecf9a5 60%, rgba(39, 140, 79, 0) 100%);
 }
 
+.nav-top .container {
+  position: relative;
+}
+
+.nav-top .btn-logo {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 150px;
+  height: 75px;
+  -webkit-filter: drop-shadow(2px 2px 4px rgba(117, 117, 54, 0.3));
+          filter: drop-shadow(2px 2px 4px rgba(117, 117, 54, 0.3));
+  opacity: 0;
+  -webkit-transform: translate(0, -60px);
+          transform: translate(0, -60px);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.nav-top .btn-logo:hover .mountain {
+  -webkit-animation: mountain 1s cubic-bezier(0, 0, 0.5, 2.5) forwards;
+          animation: mountain 1s cubic-bezier(0, 0, 0.5, 2.5) forwards;
+}
+
+.nav-top .btn-logo.active {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.nav-top .btn-logo .ribbon {
+  position: absolute;
+  z-index: 20;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding-bottom: 39.0625%;
+  background: url(../images/index/imagine.png) center bottom no-repeat;
+  background-size: 100%;
+}
+
+.nav-top .btn-logo .mountain {
+  position: absolute;
+  z-index: 10;
+  top: -25%;
+  right: 0;
+  left: 0;
+  padding-bottom: 39.0625%;
+  background: url(../images/index/imagine.png) center top no-repeat;
+  background-size: 100%;
+  -webkit-transform-origin: center bottom;
+          transform-origin: center bottom;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
 .nav-top ul {
   float: right;
   font-size: 0;
@@ -403,6 +461,17 @@ div.custom-tooltip span {
 
 .nav-top ul > li a:hover {
   background: rgba(230, 235, 199, 0.6);
+}
+
+.footer-main {
+  min-height: 10vh;
+  background: #fffcf0;
+}
+
+.footer-main .copyright {
+  color: #3a3a3a;
+  text-align: center;
+  line-height: 10vh;
 }
 
 .dialog {
@@ -542,6 +611,7 @@ div.custom-tooltip span {
   width: 42%;
   left: 30%;
   margin: 20px 0;
+  letter-spacing: 1px;
 }
 
 .page-index .imagine {
@@ -1616,7 +1686,7 @@ div.custom-tooltip span {
 }
 
 .page-route {
-  min-height: 100vh;
+  min-height: 90vh;
   background: #bbd1de;
 }
 
@@ -1843,6 +1913,10 @@ div.custom-tooltip span {
 
 .page-event .slider-wrapper .btn:active {
   background: rgba(255, 255, 255, 0.2);
+}
+
+.page-event .slider-wrapper .btn:not(.active) {
+  display: none;
 }
 
 .page-event .slider-wrapper .btn:before {

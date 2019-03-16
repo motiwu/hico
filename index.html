@@ -44,16 +44,20 @@
 
 
     <nav class="nav-top">
-        <div class="container">
+        <div class="container">    
+            <a href="#page-index" id="btn-logo" class="btn-logo" title="回首頁">
+                <div class="ribbon"></div>
+                <div class="mountain"></div>
+            </a>
             <ul>
                 <li>
                     <a href="#page-index">印向湖本</a>
                 </li>
                 <li>
-                    <a href="#page-event">展演活動</a>
+                    <a href="#page-map">探索裝置</a>
                 </li>
                 <li>
-                    <a href="#page-map">探索裝置</a>
+                    <a href="#page-event">展演活動</a>
                 </li>
                 <li>
                     <a href="#page-route">空拍地圖</a>
@@ -69,7 +73,7 @@
                     <svg class="icon-map">
                         <use xlink:href="#map" />
                     </svg>
-                    <p class="text">　將湖本場域視為村落展演模式，加上科技的應用作為湖本展示場之互動體驗依據，讓體驗者加入五感體驗，更加具體地感受到湖本的魅力之處，留下更深層的體驗回憶。期望夠過「印向湖本生態藝術祭-心心相印˙拓展愛」能讓遊客對此處的生態、生活、生產及人文特色等更加了解，創造在地經濟價值。<br><br>
+                    <p class="text">　將湖本場域視為村落展演模式，加上科技的應用作為湖本展示場之互動體驗依據，讓體驗者加入五感體驗，更加具體地感受到湖本的魅力之處，留下更深層的體驗回憶。期望透過「印向湖本生態藝術祭-心心相印·拓展愛」能讓遊客對此處的生態、生活、生產及人文特色等更加了解，創造在地經濟價值。<br><br>
                         　透過四大主題與相關活動讓湖本居民之間有更多交流的空間與機會，使村落居民更有向心力，進而吸引遊客到訪以提升社區認同感與魅力。藝術祭特色主要是以湖本當地的竹子做為媒材，編織出與大自然相融合的鳥巢，呼應湖本的八色鳥生態特色，並設置四個特色鳥巢，依序為: 活動中心－向心鳥巢、天聖宮－祈福鳥巢、賞鳥步道－尋覓鳥巢、生態合作社－歡樂鳥巢。</p>
                 </section>
 
@@ -459,8 +463,8 @@
                 <h2>展演活動</h2>
             </div>
             <div class="slider-wrapper">
-                <button class="btn btn-prev" onclick="prevevent()"></button>
-                <button class="btn btn-next" onclick="nextevent()"></button>
+                <button id="btn-event-prev" class="btn btn-prev" onclick="prevevent()"></button>
+                <button id="btn-event-next" class="btn btn-next active" onclick="nextevent()"></button>
                 <ul class="slider">
                     <li>
                         <div class="container">
@@ -788,6 +792,12 @@
             </div>
         </article>
     </main>
+
+    <footer class="footer-main">
+        <div class="container">
+            <p class="copyright">Copyright © 2019 YunTech MEID lab. 保留一切權利。</p>
+        </div>
+    </footer>
 
     <button id="btn-audio" class="btn-audio active" onclick="toggleAudio()">
         <svg class="icon-audio">

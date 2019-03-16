@@ -1,3 +1,18 @@
+// logo
+
+const btnLogo = document.getElementById('btn-logo');
+
+window.addEventListener('scroll', event => {
+    if(this.scrollY > 900) {
+        btnLogo.classList.add('active');
+    } else {
+        btnLogo.classList.remove('active');
+    }
+} );
+
+
+// page-map
+
 function toggleMarks(type) {
     let marks = [
         document.getElementById('marks-heart'),
@@ -78,18 +93,38 @@ let totalEvent = document.querySelectorAll('#page-event .slider-wrapper .slider 
 
 function goevent(target) {
     document.documentElement.style.setProperty('--currentEvent', target);
+    checkButtonActive();
 }
 
 function nextevent() {
     let currentEvent = styles.getPropertyValue('--currentEvent');
     if (currentEvent < totalEvent - 1)
         document.documentElement.style.setProperty('--currentEvent', Number(currentEvent) + 1);
+    checkButtonActive();
 }
 
 function prevevent() {
     let currentEvent = styles.getPropertyValue('--currentEvent');
     if (currentEvent > 0)
         document.documentElement.style.setProperty('--currentEvent', Number(currentEvent) - 1);
+    checkButtonActive();
+}
+
+function checkButtonActive() {
+    let cur = styles.getPropertyValue('--currentEvent');
+    
+    if(cur == 0) {        
+        document.getElementById('btn-event-prev').classList.remove('active');
+        document.getElementById('btn-event-next').classList.add('active');
+    }
+    else if (cur == totalEvent - 1) {
+        document.getElementById('btn-event-prev').classList.add('active');
+        document.getElementById('btn-event-next').classList.remove('active');
+    }
+    else {
+        document.getElementById('btn-event-prev').classList.add('active');
+        document.getElementById('btn-event-next').classList.add('active');
+    }
 }
 
 

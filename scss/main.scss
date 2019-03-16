@@ -57,6 +57,51 @@
     width: 100%;
     min-width: 1100px;
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, #eafb88 54%, #ecf9a5 60%, rgba(39, 140, 79, 0) 100%);
+    .container {
+        position: relative;
+    }
+    .btn-logo {
+        position: absolute;
+        top: 0;
+        left: 10px;
+        width: 150px;
+        height: 75px;
+        filter: drop-shadow(2px 2px 4px rgba(117, 117, 54, 0.3));
+        opacity: 0;
+        transform: translate(0, -60px);
+        transition: .3s;
+        &:hover {
+            .mountain {
+                animation: mountain 1s cubic-bezier(0, 0, 0.5, 2.5) forwards;
+            }
+        }
+        &.active {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+        .ribbon {
+            position: absolute;
+            z-index: 20;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            padding-bottom: 39.0625%;
+            background: url(../images/index/imagine.png) center bottom no-repeat;
+            background-size: 100%;
+        }
+        .mountain {
+            position: absolute;
+            z-index: 10;
+            top: -25%;
+            right: 0;
+            left: 0;
+            padding-bottom: 39.0625%;
+            background: url(../images/index/imagine.png) center top no-repeat;
+            background-size: 100%;
+            transform-origin: center bottom;
+            transition: transform .2s;
+        }
+    }
     ul {
         float: right;
         font-size: 0;;
@@ -95,6 +140,15 @@
 
 
 
+.footer-main {
+    min-height: 10vh;
+    background: #fffcf0;
+    .copyright {
+        color: #3a3a3a;
+        text-align: center;
+        line-height: 10vh;
+    }
+}
 
 
 

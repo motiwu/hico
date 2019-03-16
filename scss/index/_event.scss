@@ -29,6 +29,9 @@
             &:active {
                 background: rgba(#fff, .2);
             }
+            &:not(.active) {
+                display: none;
+            }
             &:before {
                 content: '';
                 position: absolute;
