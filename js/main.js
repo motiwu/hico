@@ -132,7 +132,7 @@ function checkButtonActive() {
 // page-map
 
 
-const mapCodes = [11, 12, 13, 14, 21, 22, 23, 24, 31, 32, 33, 34, 35, 36, 37];
+const mapCodes = [11, 12, 13, 14, 21, 22, 23, 24, 31, 32, 33, 34, 35, 36, 37, 41];
 
 function maptrans() {
     document.getElementById('page-map').classList.add('trans');

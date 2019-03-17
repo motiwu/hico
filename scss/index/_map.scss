@@ -507,6 +507,7 @@
 
     .details {
         position: absolute;
+        z-index: 100;
         left: 60%;
         top: 20%;
         .detail {
@@ -522,14 +523,19 @@
                 margin: 20px 0 0 50px;
             }
             .img {
-                width: 320px;
-                height: 240px;
+                width: 400px;
+                height: 300px;
                 border-radius: 16px;
                 background-size: contain;
+                transform-origin: right top;
+                transition: .3s;
                 @for $i from 11 through 14 {
                     &-#{$i} {
                         background-image: url('../images/map/#{$i}.png');
                     }
+                }
+                &:hover {
+                    transform: scale(2);
                 }
             }
             .intro {
@@ -543,20 +549,24 @@
 
         .detail-nite {
             >li {
-                margin: 20px;
-                padding-left: 40px; 
+                margin: 20px 0 20px 20px;
             }
             .img {
                 display: inline-block;
                 vertical-align: middle;
-                width: 320px;
-                height: 240px;
+                width: 400px;
+                height: 300px;
                 border-radius: 16px;
                 background-size: contain;
+                transform-origin: right top;
+                transition: .3s;
                 @for $i from 21 through 24 {
                     &-#{$i} {
                         background-image: url('../images/map/#{$i}.png');
                     }
+                }
+                &:hover {
+                    transform: scale(2);
                 }
                 &-22,
                 &-23 {
@@ -574,20 +584,24 @@
         
         .detail-exp {
             >li {
-                margin: 20px;
-                padding-left: 40px; 
+                margin: 20px 0 20px 20px;
             }
             .img {
                 display: inline-block;
                 vertical-align: middle;
-                width: 320px;
-                height: 240px;
+                width: 400px;
+                height: 300px;
                 border-radius: 16px;
                 background-size: contain;
+                transform-origin: right top;
+                transition: .3s;
                 @for $i from 31 through 38 {
                     &-#{$i} {
-                        background-image: url('../images/map/#{$i}.jpg');
+                        background-image: url('../images/map/#{$i}.png');
                     }
+                }
+                &:hover {
+                    transform: scale(2);
                 }
                 &-31,
                 &-32 {
@@ -599,6 +613,21 @@
                 h5 {
                     font-size: 22px;
                     line-height: 2.2;
+                }
+            }
+        }
+
+        .detail-info {
+            .intro {
+                padding-top: 200px;
+                h5 {
+                    font-size: 22px;
+                    line-height: 2.2;
+                }
+                ol {
+                    list-style: disc;
+                    padding: 0 0 0 2em;
+                    line-height: 1.2;
                 }
             }
         }

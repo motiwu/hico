@@ -474,6 +474,32 @@ div.custom-tooltip span {
   line-height: 10vh;
 }
 
+@-webkit-keyframes dialog-fadeout {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes dialog-fadeout {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 .dialog {
   display: none;
   position: fixed;
@@ -504,6 +530,8 @@ div.custom-tooltip span {
   max-width: 90%;
   text-align: left;
   background: #fff;
+  -webkit-animation: dialog-fadeout .3s;
+          animation: dialog-fadeout .3s;
 }
 
 .dialog .dialog-content .btn-x {
@@ -520,6 +548,7 @@ div.custom-tooltip span {
 
 .btn-audio {
   position: fixed;
+  z-index: 100;
   bottom: 40px;
   left: 40px;
   width: 60px;
@@ -1297,6 +1326,7 @@ div.custom-tooltip span {
 
 .page-map .details {
   position: absolute;
+  z-index: 100;
   left: 60%;
   top: 20%;
 }
@@ -1315,10 +1345,14 @@ div.custom-tooltip span {
 }
 
 .page-map .details .detail-heart .img {
-  width: 320px;
-  height: 240px;
+  width: 400px;
+  height: 300px;
   border-radius: 16px;
   background-size: contain;
+  -webkit-transform-origin: right top;
+          transform-origin: right top;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .page-map .details .detail-heart .img-11 {
@@ -1337,6 +1371,11 @@ div.custom-tooltip span {
   background-image: url("../images/map/14.png");
 }
 
+.page-map .details .detail-heart .img:hover {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+
 .page-map .details .detail-heart .intro {
   padding-top: 20px;
 }
@@ -1347,17 +1386,20 @@ div.custom-tooltip span {
 }
 
 .page-map .details .detail-nite > li {
-  margin: 20px;
-  padding-left: 40px;
+  margin: 20px 0 20px 20px;
 }
 
 .page-map .details .detail-nite .img {
   display: inline-block;
   vertical-align: middle;
-  width: 320px;
-  height: 240px;
+  width: 400px;
+  height: 300px;
   border-radius: 16px;
   background-size: contain;
+  -webkit-transform-origin: right top;
+          transform-origin: right top;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .page-map .details .detail-nite .img-21 {
@@ -1376,6 +1418,11 @@ div.custom-tooltip span {
   background-image: url("../images/map/24.png");
 }
 
+.page-map .details .detail-nite .img:hover {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+
 .page-map .details .detail-nite .img-22, .page-map .details .detail-nite .img-23 {
   width: 240px;
   height: 180px;
@@ -1387,49 +1434,57 @@ div.custom-tooltip span {
 }
 
 .page-map .details .detail-exp > li {
-  margin: 20px;
-  padding-left: 40px;
+  margin: 20px 0 20px 20px;
 }
 
 .page-map .details .detail-exp .img {
   display: inline-block;
   vertical-align: middle;
-  width: 320px;
-  height: 240px;
+  width: 400px;
+  height: 300px;
   border-radius: 16px;
   background-size: contain;
+  -webkit-transform-origin: right top;
+          transform-origin: right top;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .page-map .details .detail-exp .img-31 {
-  background-image: url("../images/map/31.jpg");
+  background-image: url("../images/map/31.png");
 }
 
 .page-map .details .detail-exp .img-32 {
-  background-image: url("../images/map/32.jpg");
+  background-image: url("../images/map/32.png");
 }
 
 .page-map .details .detail-exp .img-33 {
-  background-image: url("../images/map/33.jpg");
+  background-image: url("../images/map/33.png");
 }
 
 .page-map .details .detail-exp .img-34 {
-  background-image: url("../images/map/34.jpg");
+  background-image: url("../images/map/34.png");
 }
 
 .page-map .details .detail-exp .img-35 {
-  background-image: url("../images/map/35.jpg");
+  background-image: url("../images/map/35.png");
 }
 
 .page-map .details .detail-exp .img-36 {
-  background-image: url("../images/map/36.jpg");
+  background-image: url("../images/map/36.png");
 }
 
 .page-map .details .detail-exp .img-37 {
-  background-image: url("../images/map/37.jpg");
+  background-image: url("../images/map/37.png");
 }
 
 .page-map .details .detail-exp .img-38 {
-  background-image: url("../images/map/38.jpg");
+  background-image: url("../images/map/38.png");
+}
+
+.page-map .details .detail-exp .img:hover {
+  -webkit-transform: scale(2);
+          transform: scale(2);
 }
 
 .page-map .details .detail-exp .img-31, .page-map .details .detail-exp .img-32 {
@@ -1440,6 +1495,21 @@ div.custom-tooltip span {
 .page-map .details .detail-exp .intro h5 {
   font-size: 22px;
   line-height: 2.2;
+}
+
+.page-map .details .detail-info .intro {
+  padding-top: 200px;
+}
+
+.page-map .details .detail-info .intro h5 {
+  font-size: 22px;
+  line-height: 2.2;
+}
+
+.page-map .details .detail-info .intro ol {
+  list-style: disc;
+  padding: 0 0 0 2em;
+  line-height: 1.2;
 }
 
 .page-bird {
