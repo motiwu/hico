@@ -517,6 +517,12 @@
                 }
                 animation: detailFade .9s forwards;
             }
+            .intro {
+                strong {
+                    color: #FF9B00;
+                    font-weight: normal;
+                }
+            }
         }
         .detail-heart {
             >li {

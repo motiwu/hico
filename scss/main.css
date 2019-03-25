@@ -1340,6 +1340,11 @@ div.custom-tooltip span {
   display: none;
 }
 
+.page-map .details .detail .intro strong {
+  color: #FF9B00;
+  font-weight: normal;
+}
+
 .page-map .details .detail-heart > li {
   margin: 20px 0 0 50px;
 }
