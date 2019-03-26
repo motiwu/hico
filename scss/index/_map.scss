@@ -510,6 +510,7 @@
         z-index: 100;
         left: 60%;
         top: 20%;
+        max-width: 510px;
         .detail {
             >li {
                 &:not(.active) {
